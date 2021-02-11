@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition.common;
+package net.roxeez.advancement.common;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

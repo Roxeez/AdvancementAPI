@@ -4,7 +4,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import net.roxeez.advancement.condition.common.Dimension;
+import net.roxeez.advancement.common.Dimension;
 import java.lang.reflect.Type;
 
 public class DimensionAdapter implements JsonSerializer<Dimension> {

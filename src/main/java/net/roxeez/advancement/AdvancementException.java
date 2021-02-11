@@ -1,4 +1,4 @@
-package net.roxeez.advancement.serialization;
+package net.roxeez.advancement;
 
 public class AdvancementException extends RuntimeException {
 

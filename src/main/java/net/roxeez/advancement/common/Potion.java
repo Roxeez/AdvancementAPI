@@ -1,7 +1,10 @@
-package net.roxeez.advancement.condition.common;
+package net.roxeez.advancement.common;
 
+import com.google.common.base.Preconditions;
 import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import java.util.Arrays;
 
 /**
  * Represent all possible potion types
@@ -66,6 +69,12 @@ public enum Potion {
     @NotNull
     public NamespacedKey getKey() {
         return key;
+    }
+
+    @Nullable
+    public static Potion getByName(@NotNull String name) {
+        Preconditions.checkNotNull(name);
+        return Arrays.stream(Potion.values()).filter(x -> x.getKey().getKey().equals(name)).findFirst().orElse(null);
     }
 
 }

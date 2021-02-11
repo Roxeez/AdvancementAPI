@@ -3,8 +3,8 @@ package net.roxeez.advancement.condition;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.achievy.advancement.condition.common.PotionType;
-import net.roxeez.achievy.advancement.trigger.TriggerType;
+import net.roxeez.advancement.common.Potion;
+import net.roxeez.advancement.trigger.TriggerType;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -14,14 +14,14 @@ public class BrewedPotion implements Conditions {
 
     @Expose
     @SerializedName("potion")
-    private PotionType potion;
+    private Potion potion;
 
     /**
      * Set required potion type to trigger
      *
      * @param type Type of the potion
      */
-    public void potion(@NotNull PotionType type) {
+    public void potion(@NotNull Potion type) {
         Preconditions.checkNotNull(type);
         potion = type;
     }

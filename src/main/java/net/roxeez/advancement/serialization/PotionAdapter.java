@@ -4,7 +4,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import net.roxeez.advancement.condition.common.Potion;
+import net.roxeez.advancement.common.Potion;
 import java.lang.reflect.Type;
 
 public class PotionAdapter implements JsonSerializer<Potion> {

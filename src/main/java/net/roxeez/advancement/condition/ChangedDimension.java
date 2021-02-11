@@ -3,8 +3,8 @@ package net.roxeez.advancement.condition;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.achievy.advancement.condition.common.DimensionType;
-import net.roxeez.achievy.advancement.trigger.TriggerType;
+import net.roxeez.advancement.common.Dimension;
+import net.roxeez.advancement.trigger.TriggerType;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -14,18 +14,18 @@ public class ChangedDimension implements Conditions {
 
     @Expose
     @SerializedName("from")
-    private DimensionType from;
+    private Dimension from;
 
     @Expose
     @SerializedName("to")
-    private DimensionType to;
+    private Dimension to;
 
     /**
      * The dimension the entity traveled from
      *
      * @param type Type of dimension
      */
-    public void from(@NotNull DimensionType type) {
+    public void from(@NotNull Dimension type) {
         Preconditions.checkNotNull(type);
         this.from = type;
     }
@@ -35,7 +35,7 @@ public class ChangedDimension implements Conditions {
      *
      * @param type Type of dimension
      */
-    public void to(DimensionType type) {
+    public void to(Dimension type) {
         Preconditions.checkNotNull(type);
         this.to = type;
     }

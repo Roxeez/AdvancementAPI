@@ -2,9 +2,8 @@ package net.roxeez.advancement.serialization;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import net.roxeez.advancement.Advancement;
-import net.roxeez.advancement.condition.common.Dimension;
-import net.roxeez.advancement.condition.common.Potion;
+import net.roxeez.advancement.common.Dimension;
+import net.roxeez.advancement.common.Potion;
 import net.roxeez.advancement.display.Frame;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -12,7 +11,7 @@ import org.bukkit.entity.EntityType;
 import java.util.List;
 import java.util.Map;
 
-public class AdvancementSerializer {
+public class ObjectSerializer {
 
     private static final Gson GSON = new GsonBuilder()
             .setPrettyPrinting()
@@ -27,8 +26,8 @@ public class AdvancementSerializer {
             .registerTypeHierarchyAdapter(Map.class, new MapAdapter())
             .create();
 
-    public String serialize(Advancement advancement) {
-        return GSON.toJson(advancement);
+    public String serialize(Object object) {
+        return GSON.toJson(object);
     }
 
 }

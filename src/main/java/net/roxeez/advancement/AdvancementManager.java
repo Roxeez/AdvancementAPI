@@ -4,7 +4,7 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import net.roxeez.advancement.creator.AdvancementCreator;
 import net.roxeez.advancement.creator.Context;
-import net.roxeez.advancement.serialization.AdvancementSerializer;
+import net.roxeez.advancement.serialization.ObjectSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.Plugin;
@@ -19,7 +19,7 @@ import java.util.Map;
 public class AdvancementManager {
 
     private final Plugin plugin;
-    private final AdvancementSerializer serializer  = new AdvancementSerializer();
+    private final ObjectSerializer serializer  = new ObjectSerializer();
     private final Map<NamespacedKey, Advancement> advancements = new HashMap<>();
 
     /**

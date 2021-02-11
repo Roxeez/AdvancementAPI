@@ -3,8 +3,8 @@ package net.roxeez.advancement.condition;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.achievy.advancement.AdvancementException;
-import net.roxeez.achievy.advancement.trigger.TriggerType;
+import net.roxeez.advancement.AdvancementException;
+import net.roxeez.advancement.trigger.TriggerType;
 import org.bukkit.Material;
 import org.jetbrains.annotations.NotNull;
 
