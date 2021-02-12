@@ -6,20 +6,20 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DimensionTest extends TestBase {
+public class RangeTest extends TestBase {
 
     private final ObjectSerializer serializer = new ObjectSerializer();
 
     @Test
     public void serialization() {
-        for(Dimension dimension : Dimension.values()) {
-            assertEquals("\""+dimension.getName() + "\"", serializer.serialize(dimension));
-        }
-    }
+        Range<Integer> range = new Range<>(10, 10);
 
-    @Test
-    public void dimension_get_name_should_return_correct_value() {
-        assertEquals(Dimension.getByName("the_end"), Dimension.THE_END);
+        String serialized = serializer.serialize(range);
+
+        assertEquals("{\n" +
+                             "  \"min\": 10,\n" +
+                             "  \"max\": 10\n" +
+                             "}", serialized);
     }
 
 }

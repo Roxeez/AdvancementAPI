@@ -11,7 +11,7 @@ public class PotionTest extends TestBase {
     private final ObjectSerializer serializer = new ObjectSerializer();
 
     @Test
-    public void potion_serialization_should_return_key() {
+    public void serialization() {
         for(Potion potion : Potion.values()) {
             assertEquals("\""+ potion.getKey().toString() + "\"", serializer.serialize(potion));
         }
