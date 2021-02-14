@@ -10,7 +10,7 @@ public class Entity {
     @SerializedName("type")
     private EntityType type;
 
-    public void is(EntityType type) {
+    public void setType(EntityType type) {
         this.type = type;
     }
 

@@ -20,7 +20,7 @@ public class BrewedPotionData implements TriggerData {
      *
      * @param type Type of the potion
      */
-    public void potion(@NotNull Potion type) {
+    public void setPotion(@NotNull Potion type) {
         Preconditions.checkNotNull(type);
         potion = type;
     }

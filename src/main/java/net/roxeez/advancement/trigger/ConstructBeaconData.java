@@ -19,7 +19,7 @@ public class ConstructBeaconData implements TriggerData {
      * @param minimum Minimum level
      * @param maximum Maximum level
      */
-    public void level(int minimum, int maximum) {
+    public void setLevel(int minimum, int maximum) {
         this.level = new Range<>(minimum, maximum);
     }
 
@@ -28,7 +28,7 @@ public class ConstructBeaconData implements TriggerData {
      *
      * @param level Level required
      */
-    public void level(int level) {
+    public void setLevel(int level) {
         this.level = new Range<>(level);
     }
 }

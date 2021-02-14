@@ -1,4 +1,4 @@
-package net.roxeez.advancement.creator;
+package net.roxeez.advancement;
 
 import com.google.common.base.Preconditions;
 import net.roxeez.advancement.Advancement;

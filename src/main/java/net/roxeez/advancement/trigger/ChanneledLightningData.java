@@ -26,7 +26,7 @@ public class ChanneledLightningData implements TriggerData {
      */
     public void addVictim(@NotNull EntityType entityType) {
         Preconditions.checkNotNull(entityType);
-        addVictim(entity -> entity.is(entityType));
+        addVictim(entity -> entity.setType(entityType));
     }
 
     /**

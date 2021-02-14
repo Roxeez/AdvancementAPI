@@ -11,7 +11,7 @@ public class EntityTest extends SerializerTest<Entity> {
     protected Entity getObject() {
         Entity entity = new Entity();
 
-        entity.is(EntityType.BAT);
+        entity.setType(EntityType.BAT);
 
         return entity;
     }

@@ -15,8 +15,8 @@ public class ChangedDimensionTest extends TriggerTest<ChangedDimensionData> {
     protected ChangedDimensionData getObject() {
         ChangedDimensionData object = new ChangedDimensionData();
 
-        object.from(Dimension.OVERWORLD);
-        object.to(Dimension.THE_NETHER);
+        object.setOrigin(Dimension.OVERWORLD);
+        object.setDestination(Dimension.THE_NETHER);
 
         return object;
     }

@@ -1,6 +1,5 @@
-package net.roxeez.advancement.creator;
+package net.roxeez.advancement;
 
-import net.roxeez.advancement.Advancement;
 import org.jetbrains.annotations.NotNull;
 
 /**

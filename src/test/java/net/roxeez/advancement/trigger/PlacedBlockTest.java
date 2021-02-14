@@ -15,7 +15,7 @@ public class PlacedBlockTest extends TriggerTest<PlacedBlockData> {
     protected PlacedBlockData getObject() {
         PlacedBlockData object = new PlacedBlockData();
 
-        object.block(Material.BEDROCK);
+        object.setBlock(Material.BEDROCK);
 
         return object;
     }

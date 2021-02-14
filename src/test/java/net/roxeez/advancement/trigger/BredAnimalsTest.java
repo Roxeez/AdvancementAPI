@@ -15,9 +15,9 @@ public class BredAnimalsTest extends TriggerTest<BredAnimalsData> {
     protected BredAnimalsData getObject() {
         BredAnimalsData object = new BredAnimalsData();
 
-        object.parent(EntityType.COW);
-        object.partner(EntityType.COW);
-        object.child(EntityType.MUSHROOM_COW);
+        object.setParent(EntityType.COW);
+        object.setPartner(EntityType.COW);
+        object.setChild(EntityType.MUSHROOM_COW);
 
         return object;
     }

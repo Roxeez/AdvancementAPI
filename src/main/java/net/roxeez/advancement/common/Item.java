@@ -14,15 +14,15 @@ public class Item {
     @SerializedName("count")
     private Range<Integer> count;
 
-    public void is(Material material) {
+    public void setType(Material material) {
         this.item = material;
     }
 
-    public void count(int minimum) {
+    public void setCount(int minimum) {
         count = new Range<>(minimum);
     }
 
-    public void count(int minimum, int maximum) {
+    public void setCount(int minimum, int maximum) {
         count = new Range<>(minimum, maximum);
     }
 
