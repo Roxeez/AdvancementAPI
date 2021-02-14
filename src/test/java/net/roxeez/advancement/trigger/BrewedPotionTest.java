@@ -1,8 +1,6 @@
-package net.roxeez.advancement.data;
+package net.roxeez.advancement.trigger;
 
 import net.roxeez.advancement.common.Potion;
-import net.roxeez.advancement.trigger.Trigger;
-import net.roxeez.advancement.trigger.TriggerType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("BrewedPotion tests")

@@ -1,10 +1,9 @@
-package net.roxeez.advancement.data;
+package net.roxeez.advancement.trigger;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.common.Item;
-import net.roxeez.advancement.trigger.TriggerType;
 import org.bukkit.Material;
 import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;

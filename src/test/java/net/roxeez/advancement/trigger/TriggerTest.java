@@ -1,8 +1,7 @@
-package net.roxeez.advancement.data;
+package net.roxeez.advancement.trigger;
 
 import net.roxeez.advancement.Criteria;
 import net.roxeez.advancement.SerializerTest;
-import net.roxeez.advancement.trigger.Trigger;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

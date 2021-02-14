@@ -1,7 +1,6 @@
 package net.roxeez.advancement.trigger;
 
 import com.google.common.base.Preconditions;
-import net.roxeez.advancement.data.TriggerData;
 import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.NotNull;
 

@@ -1,7 +1,4 @@
-package net.roxeez.advancement.data;
-
-import net.roxeez.advancement.trigger.Trigger;
-import net.roxeez.advancement.trigger.TriggerType;
+package net.roxeez.advancement.trigger;
 
 public class ConstructBeaconTest extends TriggerTest<ConstructBeaconData> {
 
