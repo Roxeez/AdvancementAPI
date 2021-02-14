@@ -17,11 +17,11 @@ public class CobblestoneAdvancement implements AdvancementCreator {
         
         Advancement advancement = new Advancement(context.getPlugin(), ID);
 
-        advancement.display(display -> {
-            display.title("Some Cobblestone");
-            display.description("Get 3 cobblestone");
-            display.background(BackgroundType.STONE);
-            display.icon(Material.COBBLESTONE);
+        advancement.display(x -> {
+            x.title("Some Cobblestone");
+            x.description("Get 3 cobblestone");
+            x.background(BackgroundType.STONE);
+            x.icon(Material.COBBLESTONE);
         });
 
         advancement.addCriteria("cobblestone", TriggerType.INVENTORY_CHANGED, condition -> {
@@ -50,10 +50,10 @@ public class StonePickaxeAdvancement implements AdvancementCreator {
 
         advancement.parent(new NamespacedKey(context.getPlugin(), CobblestoneAdvancement.ID));
 
-        advancement.display(display -> {
-            display.title("Stone Pickaxe");
-            display.description("Craft a stone pickaxe with your 3 cobblestone");
-            display.icon(Material.STONE_PICKAXE);
+        advancement.display(x -> {
+            x.title("Stone Pickaxe");
+            x.description("Craft a stone pickaxe with your 3 cobblestone");
+            x.icon(Material.STONE_PICKAXE);
         });
 
         advancement.addCriteria("pickaxe", TriggerType.INVENTORY_CHANGED, condition -> {
