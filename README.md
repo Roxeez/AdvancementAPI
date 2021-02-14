@@ -1,5 +1,7 @@
 # AdvancementAPI
-[![CircleCI](https://circleci.com/gh/Roxeez/AdvancementAPI.svg?style=svg)](https://circleci.com/gh/Roxeez/AdvancementAPI) 
+[![CircleCI](https://circleci.com/gh/Roxeez/AdvancementAPI.svg?style=shield)](https://circleci.com/gh/Roxeez/AdvancementAPI) 
+![GitHub last commit](https://img.shields.io/github/last-commit/Roxeez/AdvancementAPI)
+![GitHub](https://img.shields.io/github/license/Roxeez/AdvancementAPI)
 
 AdvancementAPI is library made to easily create Advancement for your server using built in Bukkit/Spigot API features.
 
