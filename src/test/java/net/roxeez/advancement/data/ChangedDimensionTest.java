@@ -1,30 +1,34 @@
 package net.roxeez.advancement.data;
 
-import net.roxeez.advancement.TestBase;
 import net.roxeez.advancement.common.Dimension;
-import net.roxeez.advancement.serialization.ObjectSerializer;
-import org.junit.jupiter.api.Assertions;
+import net.roxeez.advancement.trigger.Trigger;
+import net.roxeez.advancement.trigger.TriggerType;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
 @DisplayName("ChangedDimension tests")
-public class ChangedDimensionDataTest extends TestBase {
+public class ChangedDimensionTest extends TriggerTest<ChangedDimensionData> {
 
-    private final ObjectSerializer serializer = new ObjectSerializer();
+    @Override
+    protected Trigger<? extends TriggerData> getTrigger() {
+        return TriggerType.CHANGED_DIMENSION;
+    }
 
-    @Test
-    @DisplayName("Check if ChangedDimension is correctly serialized")
-    public void serialization() {
+    @Override
+    protected ChangedDimensionData getObject() {
         ChangedDimensionData object = new ChangedDimensionData();
 
         object.from(Dimension.OVERWORLD);
         object.to(Dimension.THE_NETHER);
 
-        String serialized = serializer.serialize(object);
-        Assertions.assertEquals("{\n" +
-                                        "  \"from\": \"overworld\",\n" +
-                                        "  \"to\": \"the_nether\"\n" +
-                                        "}", serialized);
+        return object;
+    }
+
+    @Override
+    protected String getJson() {
+        return "{\n" +
+                "  \"from\": \"overworld\",\n" +
+                "  \"to\": \"the_nether\"\n" +
+                "}";
     }
 
 }

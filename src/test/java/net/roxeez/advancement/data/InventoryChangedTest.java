@@ -1,20 +1,20 @@
 package net.roxeez.advancement.data;
 
-import net.roxeez.advancement.TestBase;
-import net.roxeez.advancement.serialization.ObjectSerializer;
+import net.roxeez.advancement.trigger.Trigger;
+import net.roxeez.advancement.trigger.TriggerType;
 import org.bukkit.Material;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
 @DisplayName("InventoryChanged tests")
-public class InventoryChangedDataTest extends TestBase {
+public class InventoryChangedTest extends TriggerTest<InventoryChangedData> {
 
-    private final ObjectSerializer serializer = new ObjectSerializer();
+    @Override
+    protected Trigger<? extends TriggerData> getTrigger() {
+        return TriggerType.INVENTORY_CHANGED;
+    }
 
-    @Test
-    @DisplayName("Check if InventoryChanged is correctly serialized")
-    public void serialization() {
+    @Override
+    protected InventoryChangedData getObject() {
         InventoryChangedData object = new InventoryChangedData();
 
         object.hasItem(Material.BEDROCK);
@@ -23,21 +23,25 @@ public class InventoryChangedDataTest extends TestBase {
             item.count(1, 10);
         });
 
-        String serialized = serializer.serialize(object);
-        Assertions.assertEquals("{\n" +
-                                        "  \"items\": [\n" +
-                                        "    {\n" +
-                                        "      \"item\": \"minecraft:bedrock\"\n" +
-                                        "    },\n" +
-                                        "    {\n" +
-                                        "      \"item\": \"minecraft:iron_ore\",\n" +
-                                        "      \"count\": {\n" +
-                                        "        \"min\": 1,\n" +
-                                        "        \"max\": 10\n" +
-                                        "      }\n" +
-                                        "    }\n" +
-                                        "  ]\n" +
-                                        "}", serialized);
+        return object;
+    }
+
+    @Override
+    protected String getJson() {
+        return "{\n" +
+                "  \"items\": [\n" +
+                "    {\n" +
+                "      \"item\": \"minecraft:bedrock\"\n" +
+                "    },\n" +
+                "    {\n" +
+                "      \"item\": \"minecraft:iron_ore\",\n" +
+                "      \"count\": {\n" +
+                "        \"min\": 1,\n" +
+                "        \"max\": 10\n" +
+                "      }\n" +
+                "    }\n" +
+                "  ]\n" +
+                "}";
     }
 
 }
