@@ -22,7 +22,7 @@ public class BrewedPotionData implements TriggerData {
      */
     public void setPotion(@NotNull Potion type) {
         Preconditions.checkNotNull(type);
-        potion = type;
+        this.potion = type;
     }
 
 }

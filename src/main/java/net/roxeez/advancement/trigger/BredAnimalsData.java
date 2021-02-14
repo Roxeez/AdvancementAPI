@@ -32,10 +32,8 @@ public class BredAnimalsData implements TriggerData {
      */
     public void setChild(@NotNull Consumer<Entity> consumer) {
         Preconditions.checkNotNull(consumer);
-        Entity entity = new Entity();
-        consumer.accept(entity);
-
-        this.child = entity;
+        this.child = new Entity();
+        consumer.accept(this.child);
     }
 
     /**
@@ -78,10 +76,8 @@ public class BredAnimalsData implements TriggerData {
      */
     public void setParent(@NotNull Consumer<Entity> consumer) {
         Preconditions.checkNotNull(consumer);
-        Entity entity = new Entity();
-        consumer.accept(entity);
-
-        this.parent = entity;
+        this.parent = new Entity();
+        consumer.accept(this.parent);
     }
 
     /**
@@ -91,11 +87,8 @@ public class BredAnimalsData implements TriggerData {
      */
     public void setPartner(@NotNull Consumer<Entity> consumer) {
         Preconditions.checkNotNull(consumer);
-
-        Entity entity = new Entity();
-        consumer.accept(entity);
-
-        this.partner = entity;
+        this.partner = new Entity();
+        consumer.accept(this.partner);
     }
 
 }
