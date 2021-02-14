@@ -18,9 +18,7 @@ public class EntityTest extends SerializerTest<Entity> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"type\": \"minecraft:bat\"\n" +
-                "}";
+        return "{\"type\":\"minecraft:bat\"}";
     }
 
 }

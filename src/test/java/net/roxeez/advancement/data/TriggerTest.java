@@ -1,5 +1,6 @@
 package net.roxeez.advancement.data;
 
+import net.roxeez.advancement.Criteria;
 import net.roxeez.advancement.SerializerTest;
 import net.roxeez.advancement.trigger.Trigger;
 import org.junit.jupiter.api.Assertions;
@@ -14,6 +15,13 @@ public abstract class TriggerTest<T extends TriggerData> extends SerializerTest<
     @DisplayName("Check if trigger data match")
     public void trigger() {
         Assertions.assertEquals(getObject().getClass(), getTrigger().getClazz());
+    }
+
+    @Test
+    @DisplayName("Check if criteria is correctly serialized")
+    public void criteria() {
+        String serialized = serializer.serialize(new Criteria("test", getTrigger(), getObject()));
+        Assertions.assertEquals("{\"trigger\":\"" + getTrigger().getKey().toString() + "\",\"conditions\":" + getJson() + "}", serialized);
     }
 
 }

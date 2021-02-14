@@ -26,13 +26,7 @@ public class BeeNestDestroyedTest extends TriggerTest<BeeNestDestroyedData> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"block\": \"minecraft:bee_nest\",\n" +
-                "  \"item\": {\n" +
-                "    \"item\": \"minecraft:iron_axe\"\n" +
-                "  },\n" +
-                "  \"numBeesInside\": 3\n" +
-                "}";
+        return "{\"block\":\"minecraft:bee_nest\",\"item\":{\"item\":\"minecraft:iron_axe\"},\"numBeesInside\":3}";
     }
 
 }

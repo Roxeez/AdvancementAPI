@@ -26,17 +26,7 @@ public class BredAnimalsTest extends TriggerTest<BredAnimalsData> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"child\": {\n" +
-                "    \"type\": \"minecraft:mooshroom\"\n" +
-                "  },\n" +
-                "  \"parent\": {\n" +
-                "    \"type\": \"minecraft:cow\"\n" +
-                "  },\n" +
-                "  \"partner\": {\n" +
-                "    \"type\": \"minecraft:cow\"\n" +
-                "  }\n" +
-                "}";
+        return "{\"child\":{\"type\":\"minecraft:mooshroom\"},\"parent\":{\"type\":\"minecraft:cow\"},\"partner\":{\"type\":\"minecraft:cow\"}}";
     }
 
 }

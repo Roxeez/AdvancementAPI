@@ -21,13 +21,7 @@ public class ItemTest extends SerializerTest<Item> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"item\": \"minecraft:bedrock\",\n" +
-                "  \"count\": {\n" +
-                "    \"min\": 10,\n" +
-                "    \"max\": 15\n" +
-                "  }\n" +
-                "}";
+        return "{\"item\":\"minecraft:bedrock\",\"count\":{\"min\":10,\"max\":15}}";
     }
 
 }

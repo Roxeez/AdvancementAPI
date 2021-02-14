@@ -25,10 +25,7 @@ public class ChangedDimensionTest extends TriggerTest<ChangedDimensionData> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"from\": \"overworld\",\n" +
-                "  \"to\": \"the_nether\"\n" +
-                "}";
+        return "{\"from\":\"overworld\",\"to\":\"the_nether\"}";
     }
 
 }
