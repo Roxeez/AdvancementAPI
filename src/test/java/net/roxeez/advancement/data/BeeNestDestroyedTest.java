@@ -1,35 +1,38 @@
 package net.roxeez.advancement.data;
 
-import net.roxeez.advancement.TestBase;
-import net.roxeez.advancement.serialization.ObjectSerializer;
+import net.roxeez.advancement.trigger.Trigger;
+import net.roxeez.advancement.trigger.TriggerType;
 import org.bukkit.Material;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
-@DisplayName("BeeNestDestroyed tests")
-public class BeeNestDestroyedDataTest extends TestBase {
+@DisplayName("BeeNestDestroyed trigger tests")
+public class BeeNestDestroyedTest extends TriggerTest<BeeNestDestroyedData> {
 
-    private final ObjectSerializer serializer = new ObjectSerializer();
+    @Override
+    protected Trigger<BeeNestDestroyedData> getTrigger() {
+        return TriggerType.BEE_NEST_DESTROYED;
+    }
 
-    @Test
-    @DisplayName("Check if BeeNestDestroyed is correctly serialized")
-    public void serialization() {
+    @Override
+    protected BeeNestDestroyedData getObject() {
         BeeNestDestroyedData object = new BeeNestDestroyedData();
 
         object.block(Material.BEE_NEST);
         object.withItem(Material.IRON_AXE);
         object.withBeeCount(3);
 
-        String serialized = serializer.serialize(object);
+        return object;
+    }
 
-        Assertions.assertEquals("{\n" +
-                                        "  \"block\": \"minecraft:bee_nest\",\n" +
-                                        "  \"item\": {\n" +
-                                        "    \"item\": \"minecraft:iron_axe\"\n" +
-                                        "  },\n" +
-                                        "  \"numBeesInside\": 3\n" +
-                                        "}", serialized);
+    @Override
+    protected String getJson() {
+        return "{\n" +
+                "  \"block\": \"minecraft:bee_nest\",\n" +
+                "  \"item\": {\n" +
+                "    \"item\": \"minecraft:iron_axe\"\n" +
+                "  },\n" +
+                "  \"numBeesInside\": 3\n" +
+                "}";
     }
 
 }

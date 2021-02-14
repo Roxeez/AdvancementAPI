@@ -1,28 +1,32 @@
 package net.roxeez.advancement.data;
 
-import net.roxeez.advancement.TestBase;
-import net.roxeez.advancement.serialization.ObjectSerializer;
+import net.roxeez.advancement.trigger.Trigger;
+import net.roxeez.advancement.trigger.TriggerType;
 import org.bukkit.Material;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
 @DisplayName("PlacedBlock tests")
-public class PlacedBlockDataTest extends TestBase {
+public class PlacedBlockTest extends TriggerTest<PlacedBlockData> {
 
-    private final ObjectSerializer serializer = new ObjectSerializer();
+    @Override
+    protected Trigger<? extends TriggerData> getTrigger() {
+        return TriggerType.PLACED_BLOCK;
+    }
 
-    @Test
-    @DisplayName("Check if PlacedBlock is correctly serialized")
-    public void serialization() {
+    @Override
+    protected PlacedBlockData getObject() {
         PlacedBlockData object = new PlacedBlockData();
 
         object.block(Material.BEDROCK);
 
-        String serialized = serializer.serialize(object);
-        Assertions.assertEquals("{\n" +
-                                        "  \"block\": \"minecraft:bedrock\"\n" +
-                                        "}", serialized);
+        return object;
+    }
+
+    @Override
+    protected String getJson() {
+        return "{\n" +
+                "  \"block\": \"minecraft:bedrock\"\n" +
+                "}";
     }
 
 }
