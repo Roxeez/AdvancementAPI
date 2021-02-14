@@ -1,6 +1,6 @@
 package net.roxeez.advancement.trigger;
 
-import net.roxeez.advancement.common.Potion;
+import net.roxeez.advancement.common.PotionType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("BrewedPotion tests")
@@ -15,7 +15,7 @@ public class BrewedPotionTest extends TriggerTest<BrewedPotionData> {
     protected BrewedPotionData getObject() {
         BrewedPotionData object = new BrewedPotionData();
 
-        object.setPotion(Potion.LUCK);
+        object.setPotion(PotionType.LUCK);
 
         return object;
     }

@@ -4,13 +4,13 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import net.roxeez.advancement.common.Potion;
+import net.roxeez.advancement.common.PotionType;
 import java.lang.reflect.Type;
 
-public class PotionAdapter implements JsonSerializer<Potion> {
+public class PotionTypeAdapter implements JsonSerializer<PotionType> {
 
     @Override
-    public JsonElement serialize(Potion src, Type typeOfSrc, JsonSerializationContext context) {
+    public JsonElement serialize(PotionType src, Type typeOfSrc, JsonSerializationContext context) {
         return new JsonPrimitive(src.getKey().toString());
     }
 

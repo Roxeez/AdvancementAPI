@@ -6,11 +6,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Potion tests")
-public class PotionTest extends SerializerTest<Potion> {
+public class PotionTypeTest extends SerializerTest<PotionType> {
 
     @Override
-    protected Potion getObject() {
-        return Potion.HARMING_II;
+    protected PotionType getObject() {
+        return PotionType.HARMING_II;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class PotionTest extends SerializerTest<Potion> {
     @Test
     @DisplayName("Check if Potion#getByName return correct value")
     public void getByNameShouldReturnCorrectPotion() {
-        Assertions.assertEquals(Potion.getByName("strong_healing"), Potion.INSTANT_HEALTH_II);
+        Assertions.assertEquals(PotionType.getByName("strong_healing"), PotionType.INSTANT_HEALTH_II);
     }
 
 }

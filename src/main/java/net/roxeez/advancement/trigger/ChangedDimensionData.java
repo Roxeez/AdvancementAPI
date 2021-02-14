@@ -3,7 +3,7 @@ package net.roxeez.advancement.trigger;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.common.Dimension;
+import net.roxeez.advancement.common.DimensionType;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -13,18 +13,18 @@ public class ChangedDimensionData implements TriggerData {
 
     @Expose
     @SerializedName("from")
-    private Dimension from;
+    private DimensionType from;
 
     @Expose
     @SerializedName("to")
-    private Dimension to;
+    private DimensionType to;
 
     /**
      * The dimension the entity traveled from
      *
      * @param type Type of dimension
      */
-    public void setOrigin(@NotNull Dimension type) {
+    public void setOrigin(@NotNull DimensionType type) {
         Preconditions.checkNotNull(type);
         this.from = type;
     }
@@ -34,7 +34,7 @@ public class ChangedDimensionData implements TriggerData {
      *
      * @param type Type of dimension
      */
-    public void setDestination(Dimension type) {
+    public void setDestination(DimensionType type) {
         Preconditions.checkNotNull(type);
         this.to = type;
     }

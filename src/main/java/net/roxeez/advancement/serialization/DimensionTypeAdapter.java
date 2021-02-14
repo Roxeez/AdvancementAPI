@@ -4,13 +4,13 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
-import net.roxeez.advancement.common.Dimension;
+import net.roxeez.advancement.common.DimensionType;
 import java.lang.reflect.Type;
 
-public class DimensionAdapter implements JsonSerializer<Dimension> {
+public class DimensionTypeAdapter implements JsonSerializer<DimensionType> {
 
     @Override
-    public JsonElement serialize(Dimension src, Type typeOfSrc, JsonSerializationContext context) {
+    public JsonElement serialize(DimensionType src, Type typeOfSrc, JsonSerializationContext context) {
         return new JsonPrimitive(src.getName());
     }
 
