@@ -58,6 +58,8 @@ public final class TriggerType {
     @NotNull
     public static final Trigger<ConsumeItemData> CONSUME_ITEM = new Trigger<>("consume_item", ConsumeItemData.class);
 
+    public static final Trigger<CuredZombieVillagerData> CURED_ZOMBIE_VILLAGER = new Trigger<>("cured_zombie_villager", CuredZombieVillagerData.class);
+
     private TriggerType() {
 
     }
