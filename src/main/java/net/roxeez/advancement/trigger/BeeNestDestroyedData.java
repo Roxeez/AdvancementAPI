@@ -33,7 +33,7 @@ public class BeeNestDestroyedData implements TriggerData {
      *
      * @throws AdvancementException If material is not a block or a bee nest/beehive
      */
-    public void block(@NotNull Material block) {
+    public void setBlock(@NotNull Material block) {
         Preconditions.checkNotNull(block);
 
         if (!block.isBlock()) {
@@ -66,7 +66,7 @@ public class BeeNestDestroyedData implements TriggerData {
      */
     public void withItem(@NotNull Material material) {
         Preconditions.checkNotNull(material);
-        withItem(item -> item.is(material));
+        withItem(item -> item.setType(material));
     }
 
     /**

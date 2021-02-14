@@ -15,7 +15,7 @@ public class BrewedPotionTest extends TriggerTest<BrewedPotionData> {
     protected BrewedPotionData getObject() {
         BrewedPotionData object = new BrewedPotionData();
 
-        object.potion(Potion.LUCK);
+        object.setPotion(Potion.LUCK);
 
         return object;
     }

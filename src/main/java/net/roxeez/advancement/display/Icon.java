@@ -24,7 +24,7 @@ public class Icon {
      *
      * @param material Material to display in this icon
      */
-    public void item(@NotNull Material material) {
+    public void setItem(@NotNull Material material) {
         Preconditions.checkNotNull(material);
         this.item = material.getKey();
     }

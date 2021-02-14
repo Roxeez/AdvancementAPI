@@ -2,8 +2,6 @@ package net.roxeez.advancement;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
-import net.roxeez.advancement.creator.AdvancementCreator;
-import net.roxeez.advancement.creator.Context;
 import net.roxeez.advancement.serialization.ObjectSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;

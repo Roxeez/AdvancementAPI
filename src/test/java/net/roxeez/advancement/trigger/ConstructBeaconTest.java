@@ -6,7 +6,7 @@ public class ConstructBeaconTest extends TriggerTest<ConstructBeaconData> {
     protected ConstructBeaconData getObject() {
         ConstructBeaconData object = new ConstructBeaconData();
 
-        object.level(3);
+        object.setLevel(3);
 
         return object;
     }

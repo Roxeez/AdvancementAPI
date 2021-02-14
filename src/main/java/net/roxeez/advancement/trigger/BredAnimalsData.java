@@ -30,7 +30,7 @@ public class BredAnimalsData implements TriggerData {
      *
      * @param consumer Predicate of entity
      */
-    public void child(@NotNull Consumer<Entity> consumer) {
+    public void setChild(@NotNull Consumer<Entity> consumer) {
         Preconditions.checkNotNull(consumer);
         Entity entity = new Entity();
         consumer.accept(entity);
@@ -44,9 +44,9 @@ public class BredAnimalsData implements TriggerData {
      *
      * @param entityType Type of entity required
      */
-    public void child(@NotNull EntityType entityType) {
+    public void setChild(@NotNull EntityType entityType) {
         Preconditions.checkNotNull(entityType);
-        child(entity -> entity.is(entityType));
+        setChild(entity -> entity.setType(entityType));
     }
 
     /**
@@ -55,9 +55,9 @@ public class BredAnimalsData implements TriggerData {
      *
      * @param entityType Type of entity required
      */
-    public void parent(@NotNull EntityType entityType) {
+    public void setParent(@NotNull EntityType entityType) {
         Preconditions.checkNotNull(entityType);
-        parent(entity -> entity.is(entityType));
+        setParent(entity -> entity.setType(entityType));
     }
 
     /**
@@ -66,9 +66,9 @@ public class BredAnimalsData implements TriggerData {
      *
      * @param entityType Type of entity required
      */
-    public void partner(@NotNull EntityType entityType) {
+    public void setPartner(@NotNull EntityType entityType) {
         Preconditions.checkNotNull(entityType);
-        partner(entity -> entity.is(entityType));
+        setPartner(entity -> entity.setType(entityType));
     }
 
     /**
@@ -76,7 +76,7 @@ public class BredAnimalsData implements TriggerData {
      *
      * @param consumer Predicate of entity
      */
-    public void parent(@NotNull Consumer<Entity> consumer) {
+    public void setParent(@NotNull Consumer<Entity> consumer) {
         Preconditions.checkNotNull(consumer);
         Entity entity = new Entity();
         consumer.accept(entity);
@@ -89,7 +89,7 @@ public class BredAnimalsData implements TriggerData {
      *
      * @param consumer Predicate of entity
      */
-    public void partner(@NotNull Consumer<Entity> consumer) {
+    public void setPartner(@NotNull Consumer<Entity> consumer) {
         Preconditions.checkNotNull(consumer);
 
         Entity entity = new Entity();

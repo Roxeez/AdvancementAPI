@@ -74,7 +74,7 @@ public class Display {
      *
      * @param title Title of advancement
      */
-    public void title(@NotNull String title) {
+    public void setTitle(@NotNull String title) {
         Preconditions.checkNotNull(title);
         this.title = title;
     }
@@ -84,7 +84,7 @@ public class Display {
      *
      * @param description Description of advancement
      */
-    public void description(@NotNull String description) {
+    public void setDescription(@NotNull String description) {
         Preconditions.checkNotNull(description);
         this.description = description;
     }
@@ -94,7 +94,7 @@ public class Display {
      *
      * @param frame Frame of advancement
      */
-    public void frame(@NotNull Frame frame) {
+    public void setFrame(@NotNull Frame frame) {
         Preconditions.checkNotNull(frame);
         this.frame = frame;
     }
@@ -105,7 +105,7 @@ public class Display {
      *
      * @param consumer Consumer to execute on icon
      */
-    public void icon(@NotNull Consumer<Icon> consumer) {
+    public void setIcon(@NotNull Consumer<Icon> consumer) {
         Preconditions.checkNotNull(consumer);
         Icon icon = new Icon();
         consumer.accept(icon);
@@ -118,11 +118,11 @@ public class Display {
      *
      * @param material Item of advancement icon
      */
-    public void icon(@NotNull Material material) {
+    public void setIcon(@NotNull Material material) {
         Preconditions.checkNotNull(material);
 
         Icon icon = new Icon();
-        icon.item(material);
+        icon.setItem(material);
 
         this.icon = icon;
     }
@@ -133,7 +133,7 @@ public class Display {
      *
      * @param background Background of this advancement
      */
-    public void background(@NotNull BackgroundType background) {
+    public void setBackground(@NotNull BackgroundType background) {
         Preconditions.checkNotNull(background);
         this.background = background.getTexture();
     }
@@ -144,7 +144,7 @@ public class Display {
      *
      * @param key Key of the background
      */
-    public void background(@NotNull NamespacedKey key) {
+    public void setBackground(@NotNull NamespacedKey key) {
         Preconditions.checkNotNull(key);
         this.background = key;
     }

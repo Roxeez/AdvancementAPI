@@ -17,8 +17,8 @@ public class InventoryChangedTest extends TriggerTest<InventoryChangedData> {
 
         object.hasItem(Material.BEDROCK);
         object.hasItemMatching(item -> {
-            item.is(Material.IRON_ORE);
-            item.count(1, 10);
+            item.setType(Material.IRON_ORE);
+            item.setCount(1, 10);
         });
 
         return object;

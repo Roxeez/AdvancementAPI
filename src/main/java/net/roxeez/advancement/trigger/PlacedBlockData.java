@@ -23,7 +23,7 @@ public class PlacedBlockData implements TriggerData {
      *
      * @throws AdvancementException If Material is not a block
      */
-    public void block(@NotNull Material material) {
+    public void setBlock(@NotNull Material material) {
         Preconditions.checkNotNull(material);
         if (!material.isBlock()) {
             throw new AdvancementException("Calling PlacedBlock#is with a non block Material");

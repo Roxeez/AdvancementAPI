@@ -41,7 +41,7 @@ public class InventoryChangedData implements TriggerData {
     public void hasItem(@NotNull Material material) {
         Preconditions.checkNotNull(material);
         Item predicate = new Item();
-        predicate.is(material);
+        predicate.setType(material);
 
         items.add(predicate);
     }

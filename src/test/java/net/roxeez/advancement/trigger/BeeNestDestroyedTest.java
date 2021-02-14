@@ -15,7 +15,7 @@ public class BeeNestDestroyedTest extends TriggerTest<BeeNestDestroyedData> {
     protected BeeNestDestroyedData getObject() {
         BeeNestDestroyedData object = new BeeNestDestroyedData();
 
-        object.block(Material.BEE_NEST);
+        object.setBlock(Material.BEE_NEST);
         object.withItem(Material.IRON_AXE);
         object.withBeeCount(3);
 
