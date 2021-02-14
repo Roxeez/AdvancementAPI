@@ -46,7 +46,7 @@ public class Display {
      */
     @Expose
     @SerializedName("frame")
-    private Frame frame;
+    private FrameType frame;
 
     /**
      * Define if toast is displayed when unlocking this advancement
@@ -94,7 +94,7 @@ public class Display {
      *
      * @param frame Frame of advancement
      */
-    public void setFrame(@NotNull Frame frame) {
+    public void setFrame(@NotNull FrameType frame) {
         Preconditions.checkNotNull(frame);
         this.frame = frame;
     }

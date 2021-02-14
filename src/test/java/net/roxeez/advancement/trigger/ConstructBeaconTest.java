@@ -1,5 +1,8 @@
 package net.roxeez.advancement.trigger;
 
+import org.junit.jupiter.api.DisplayName;
+
+@DisplayName("ConstructBeacon tests")
 public class ConstructBeaconTest extends TriggerTest<ConstructBeaconData> {
 
     @Override

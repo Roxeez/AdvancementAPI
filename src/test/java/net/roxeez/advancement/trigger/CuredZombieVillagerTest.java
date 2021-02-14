@@ -1,5 +1,8 @@
 package net.roxeez.advancement.trigger;
 
+import org.junit.jupiter.api.DisplayName;
+
+@DisplayName("CuredZombieVillager tests")
 public class CuredZombieVillagerTest extends TriggerTest<CuredZombieVillagerData> {
 
     @Override

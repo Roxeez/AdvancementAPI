@@ -55,10 +55,29 @@ public final class TriggerType {
     @NotNull
     public static final Trigger<ConstructBeaconData> CONSTRUCT_BEACON = new Trigger<>("construct_beacon", ConstructBeaconData.class);
 
+    /**
+     * Triggers when the player consumes an item
+     */
     @NotNull
     public static final Trigger<ConsumeItemData> CONSUME_ITEM = new Trigger<>("consume_item", ConsumeItemData.class);
 
+    /**
+     * Triggers when the player cures a zombie villager
+     */
+    @NotNull
     public static final Trigger<CuredZombieVillagerData> CURED_ZOMBIE_VILLAGER = new Trigger<>("cured_zombie_villager", CuredZombieVillagerData.class);
+
+    /**
+     * Triggers after the player gets a status effect applied or taken from them
+     */
+    @NotNull
+    public static final Trigger<EffectsChangedData> EFFECTS_CHANGED = new Trigger<>("effects_changed", EffectsChangedData.class);
+
+    /**
+     * Triggers after the player enchants an item through an enchanting table (does not get triggered through an anvil, or through commands)
+     */
+    @NotNull
+    public static final Trigger<EnchantedItemData> ENCHANTED_ITEM = new Trigger<>("enchanted_item", EnchantedItemData.class);
 
     private TriggerType() {
 

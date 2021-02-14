@@ -9,7 +9,7 @@ import java.util.Arrays;
 /**
  * Represent all possible potion types
  */
-public enum Potion {
+public enum PotionType {
 
     UNCRAFTABLE("empty"),
     WATER("water"),
@@ -57,7 +57,7 @@ public enum Potion {
 
     private final NamespacedKey key;
 
-    Potion(@NotNull String name) {
+    PotionType(@NotNull String name) {
         this.key = NamespacedKey.minecraft(name);
     }
 
@@ -72,9 +72,9 @@ public enum Potion {
     }
 
     @Nullable
-    public static Potion getByName(@NotNull String name) {
+    public static PotionType getByName(@NotNull String name) {
         Preconditions.checkNotNull(name);
-        return Arrays.stream(Potion.values()).filter(x -> x.getKey().getKey().equals(name)).findFirst().orElse(null);
+        return Arrays.stream(PotionType.values()).filter(x -> x.getKey().getKey().equals(name)).findFirst().orElse(null);
     }
 
 }

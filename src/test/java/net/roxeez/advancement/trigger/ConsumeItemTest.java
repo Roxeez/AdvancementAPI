@@ -1,7 +1,9 @@
 package net.roxeez.advancement.trigger;
 
 import org.bukkit.Material;
+import org.junit.jupiter.api.DisplayName;
 
+@DisplayName("ConsumeItem tests")
 public class ConsumeItemTest extends TriggerTest<ConsumeItemData> {
 
     @Override

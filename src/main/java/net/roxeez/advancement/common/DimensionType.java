@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * All possible dimension type
  */
-public enum Dimension {
+public enum DimensionType {
 
     OVERWORLD("overworld"),
     THE_NETHER("the_nether"),
@@ -16,7 +16,7 @@ public enum Dimension {
 
     private final String name;
 
-    Dimension(String name) {
+    DimensionType(String name) {
         this.name = name;
     }
 
@@ -30,8 +30,8 @@ public enum Dimension {
     }
 
     @Nullable
-    public static Dimension getByName(@NotNull String name) {
+    public static DimensionType getByName(@NotNull String name) {
         Preconditions.checkNotNull(name);
-        return Arrays.stream(Dimension.values()).filter(x -> x.getName().equals(name)).findFirst().orElse(null);
+        return Arrays.stream(DimensionType.values()).filter(x -> x.getName().equals(name)).findFirst().orElse(null);
     }
 }
