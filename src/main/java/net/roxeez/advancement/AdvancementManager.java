@@ -62,24 +62,33 @@ public class AdvancementManager {
      */
     public void register(@NotNull AdvancementCreator creator) {
         Preconditions.checkNotNull(creator);
-        register(creator.create(new Context(plugin, advancements)));
+        Advancement advancement = creator.create(new Context(plugin, advancements));
+        this.advancements.put(advancement.getKey(), advancement);
     }
 
     /**
-     * Register a specific advancement
-     *
-     * @param advancement Advancement to register
+     * Create all registered advancements
      */
-    public void register(@NotNull Advancement advancement) {
-        Preconditions.checkNotNull(advancement);
-
-        if (Bukkit.getAdvancement(advancement.getKey()) != null) {
-            Bukkit.getUnsafe().removeAdvancement(advancement.getKey());
+    public void createAll()
+    {
+        plugin.getLogger().info("[AdvancementAPI] Cleaning previously generated advancements");
+        for(Advancement advancement : this.advancements.values())
+        {
+            if (Bukkit.getAdvancement(advancement.getKey()) != null)
+            {
+                Bukkit.getUnsafe().removeAdvancement(advancement.getKey());
+            }
         }
 
-        advancements.put(advancement.getKey(), advancement);
+        Bukkit.reloadData();
 
-        Bukkit.getUnsafe().loadAdvancement(advancement.getKey(), serializer.serialize(advancement));
+        plugin.getLogger().info("[AdvancementAPI] Generating advancements");
+        for(Advancement advancement : this.advancements.values())
+        {
+            Bukkit.getUnsafe().loadAdvancement(advancement.getKey(), serializer.serialize(advancement));
+        }
+
+        Bukkit.reloadData();
     }
 
 }

@@ -66,7 +66,7 @@ public class StonePickaxeAdvancement implements AdvancementCreator {
 }
 ```  
 
-**Register previously created advancemeents**
+**Register previously created advancements**
 ```java
 public class MyPlugin extends JavaPlugin {
 
@@ -76,6 +76,8 @@ public class MyPlugin extends JavaPlugin {
     public void onEnable() {
         manager.register(new CobblestoneAdvancement());
         manager.register(new StonePickaxeAdvancement());
+        
+        manager.createAll();
     }
 
 }
