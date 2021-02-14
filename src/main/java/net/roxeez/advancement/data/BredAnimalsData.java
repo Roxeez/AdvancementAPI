@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
@@ -10,9 +10,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Consumer;
 
 /**
- * Conditions used by {@link TriggerType#BRED_ANIMALS}
+ * Data used by {@link TriggerType#BRED_ANIMALS}
  */
-public class BredAnimals implements Conditions {
+public class BredAnimalsData implements TriggerData {
 
     @Expose
     @SerializedName("child")

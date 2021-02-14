@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
@@ -8,9 +8,9 @@ import net.roxeez.advancement.trigger.TriggerType;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Conditions used by {@link TriggerType#CHANGED_DIMENSION}
+ * Data used by {@link TriggerType#CHANGED_DIMENSION}
  */
-public class ChangedDimension implements Conditions {
+public class ChangedDimensionData implements TriggerData {
 
     @Expose
     @SerializedName("from")

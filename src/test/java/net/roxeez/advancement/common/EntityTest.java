@@ -1,27 +1,26 @@
 package net.roxeez.advancement.common;
 
-import net.roxeez.advancement.serialization.ObjectSerializer;
+import net.roxeez.advancement.SerializerTest;
 import org.bukkit.entity.EntityType;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
 @DisplayName("Entity tests")
-public class EntityTest {
+public class EntityTest extends SerializerTest<Entity> {
 
-    private final ObjectSerializer serializer = new ObjectSerializer();
-
-    @Test
-    @DisplayName("Check if all values of Entity are correctly serialized")
-    public void serialization() {
+    @Override
+    protected Entity getObject() {
         Entity entity = new Entity();
 
         entity.is(EntityType.BAT);
 
-        String serialized = serializer.serialize(entity);
-        Assertions.assertEquals("{\n" +
-                             "  \"type\": \"minecraft:bat\"\n" +
-                             "}", serialized);
+        return entity;
+    }
+
+    @Override
+    protected String getJson() {
+        return "{\n" +
+                "  \"type\": \"minecraft:bat\"\n" +
+                "}";
     }
 
 }

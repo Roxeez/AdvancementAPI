@@ -1,5 +1,6 @@
 package net.roxeez.advancement.common;
 
+import net.roxeez.advancement.SerializerTest;
 import net.roxeez.advancement.TestBase;
 import net.roxeez.advancement.serialization.ObjectSerializer;
 import org.junit.jupiter.api.Assertions;
@@ -7,16 +8,16 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Dimension tests")
-public class DimensionTest extends TestBase {
+public class DimensionTest extends SerializerTest<Dimension> {
 
-    private final ObjectSerializer serializer = new ObjectSerializer();
+    @Override
+    protected Dimension getObject() {
+        return Dimension.OVERWORLD;
+    }
 
-    @Test
-    @DisplayName("Check if all dimension are serialized using dimension name")
-    public void serialization() {
-        for(Dimension dimension : Dimension.values()) {
-            Assertions.assertEquals("\"" + dimension.getName() + "\"", serializer.serialize(dimension));
-        }
+    @Override
+    protected String getJson() {
+        return "\"overworld\"";
     }
 
     @Test

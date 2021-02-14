@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.function.Consumer;
 
 /**
- * Conditions used by {@link TriggerType#CHANNELED_LIGHTNING}
+ * Data used by {@link TriggerType#CHANNELED_LIGHTNING}
  */
-public class ChanneledLightning implements Conditions {
+public class ChanneledLightningData implements TriggerData {
 
     @Expose
     @SerializedName("victims")

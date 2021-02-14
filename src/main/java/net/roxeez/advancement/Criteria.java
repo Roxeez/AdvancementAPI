@@ -3,7 +3,7 @@ package net.roxeez.advancement;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.condition.Conditions;
+import net.roxeez.advancement.data.TriggerData;
 import net.roxeez.advancement.trigger.Trigger;
 import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.NotNull;
@@ -18,16 +18,16 @@ public class Criteria {
 
     @Expose
     @SerializedName("conditions")
-    private final Conditions conditions;
+    private final TriggerData triggerData;
 
-    public Criteria(@NotNull String name, @NotNull Trigger<?> trigger, @NotNull Conditions conditions) {
+    public Criteria(@NotNull String name, @NotNull Trigger<?> trigger, @NotNull TriggerData triggerData) {
         Preconditions.checkNotNull(name);
         Preconditions.checkNotNull(trigger);
-        Preconditions.checkNotNull(conditions);
+        Preconditions.checkNotNull(triggerData);
 
         this.name = name;
         this.trigger = trigger.getKey();
-        this.conditions = conditions;
+        this.triggerData = triggerData;
     }
 
     /**

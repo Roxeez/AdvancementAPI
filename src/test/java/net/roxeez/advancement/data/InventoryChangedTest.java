@@ -1,7 +1,6 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import net.roxeez.advancement.TestBase;
-import net.roxeez.advancement.common.Dimension;
 import net.roxeez.advancement.serialization.ObjectSerializer;
 import org.bukkit.Material;
 import org.junit.jupiter.api.Assertions;
@@ -9,14 +8,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("InventoryChanged tests")
-public class InventoryChangedTest extends TestBase {
+public class InventoryChangedDataTest extends TestBase {
 
     private final ObjectSerializer serializer = new ObjectSerializer();
 
     @Test
     @DisplayName("Check if InventoryChanged is correctly serialized")
     public void serialization() {
-        InventoryChanged object = new InventoryChanged();
+        InventoryChangedData object = new InventoryChangedData();
 
         object.hasItem(Material.BEDROCK);
         object.hasItemMatching(item -> {
