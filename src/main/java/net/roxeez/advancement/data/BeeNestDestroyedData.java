@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
@@ -11,9 +11,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Consumer;
 
 /**
- * Conditions used by {@link TriggerType#BEE_NEST_DESTROYED}
+ * Data used by {@link TriggerType#BEE_NEST_DESTROYED}
  */
-public class BeeNestDestroyed implements Conditions {
+public class BeeNestDestroyedData implements TriggerData {
 
     @Expose
     @SerializedName("block")

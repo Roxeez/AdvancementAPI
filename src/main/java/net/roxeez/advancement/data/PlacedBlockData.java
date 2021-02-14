@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
@@ -9,9 +9,9 @@ import org.bukkit.Material;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Conditions used by {@link TriggerType#PLACED_BLOCK}
+ * Data used by {@link TriggerType#PLACED_BLOCK}
  */
-public class PlacedBlock implements Conditions {
+public class PlacedBlockData implements TriggerData {
 
     @Expose
     @SerializedName("block")

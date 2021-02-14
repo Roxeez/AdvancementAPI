@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import net.roxeez.advancement.TestBase;
 import net.roxeez.advancement.serialization.ObjectSerializer;
@@ -8,14 +8,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("ChanneledLightning tests")
-public class ChanneledLightningTest extends TestBase {
+public class ChanneledLightningDataTest extends TestBase {
 
     private final ObjectSerializer serializer = new ObjectSerializer();
 
     @Test
     @DisplayName("Check if ChanneledLightning is correctly serialized")
     public void serialization() {
-        ChanneledLightning object = new ChanneledLightning();
+        ChanneledLightningData object = new ChanneledLightningData();
 
         object.addVictim(EntityType.BAT);
         object.addVictim(EntityType.CHICKEN);

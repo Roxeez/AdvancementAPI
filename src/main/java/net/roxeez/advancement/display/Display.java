@@ -48,14 +48,23 @@ public class Display {
     @SerializedName("frame")
     private Frame frame;
 
+    /**
+     * Define if toast is displayed when unlocking this advancement
+     */
     @Expose
     @SerializedName("show_toast")
     private boolean toast = true;
 
+    /**
+     * Define if an announce is made when unlocking this advancement
+     */
     @Expose
     @SerializedName("announce_to_chat")
     private boolean announce = true;
 
+    /**
+     * Define if this advancement is hidden
+     */
     @Expose
     @SerializedName("hidden")
     private boolean hidden = false;
@@ -65,7 +74,7 @@ public class Display {
      *
      * @param title Title of advancement
      */
-    public void setTitle(@NotNull String title) {
+    public void title(@NotNull String title) {
         Preconditions.checkNotNull(title);
         this.title = title;
     }
@@ -75,7 +84,7 @@ public class Display {
      *
      * @param description Description of advancement
      */
-    public void setDescription(@NotNull String description) {
+    public void description(@NotNull String description) {
         Preconditions.checkNotNull(description);
         this.description = description;
     }
@@ -85,7 +94,7 @@ public class Display {
      *
      * @param frame Frame of advancement
      */
-    public void setFrame(@NotNull Frame frame) {
+    public void frame(@NotNull Frame frame) {
         Preconditions.checkNotNull(frame);
         this.frame = frame;
     }
@@ -96,7 +105,7 @@ public class Display {
      *
      * @param consumer Consumer to execute on icon
      */
-    public void setIcon(@NotNull Consumer<Icon> consumer) {
+    public void icon(@NotNull Consumer<Icon> consumer) {
         Preconditions.checkNotNull(consumer);
         Icon icon = new Icon();
         consumer.accept(icon);
@@ -109,11 +118,11 @@ public class Display {
      *
      * @param material Item of advancement icon
      */
-    public void setIcon(@NotNull Material material) {
+    public void icon(@NotNull Material material) {
         Preconditions.checkNotNull(material);
 
         Icon icon = new Icon();
-        icon.setItem(material);
+        icon.item(material);
 
         this.icon = icon;
     }
@@ -124,7 +133,7 @@ public class Display {
      *
      * @param background Background of this advancement
      */
-    public void setBackground(@NotNull BackgroundType background) {
+    public void background(@NotNull BackgroundType background) {
         Preconditions.checkNotNull(background);
         this.background = background.getTexture();
     }
@@ -135,7 +144,7 @@ public class Display {
      *
      * @param key Key of the background
      */
-    public void setBackground(@NotNull NamespacedKey key) {
+    public void background(@NotNull NamespacedKey key) {
         Preconditions.checkNotNull(key);
         this.background = key;
     }
@@ -145,7 +154,7 @@ public class Display {
      *
      * @param toast True if displayed false if not
      */
-    public void setToast(boolean toast) {
+    public void toast(boolean toast) {
         this.toast = toast;
     }
 
@@ -154,7 +163,7 @@ public class Display {
      *
      * @param announce True if yes false if not
      */
-    public void setAnnounce(boolean announce) {
+    public void announce(boolean announce) {
         this.announce = announce;
     }
 
@@ -163,7 +172,7 @@ public class Display {
      *
      * @param hidden True if hidden false if visible
      */
-    public void setHidden(boolean hidden) {
+    public void hidden(boolean hidden) {
         this.hidden = hidden;
     }
 

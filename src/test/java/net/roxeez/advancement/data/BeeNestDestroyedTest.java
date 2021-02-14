@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import net.roxeez.advancement.TestBase;
 import net.roxeez.advancement.serialization.ObjectSerializer;
@@ -8,14 +8,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("BeeNestDestroyed tests")
-public class BeeNestDestroyedTest extends TestBase {
+public class BeeNestDestroyedDataTest extends TestBase {
 
     private final ObjectSerializer serializer = new ObjectSerializer();
 
     @Test
     @DisplayName("Check if BeeNestDestroyed is correctly serialized")
     public void serialization() {
-        BeeNestDestroyed object = new BeeNestDestroyed();
+        BeeNestDestroyedData object = new BeeNestDestroyedData();
 
         object.block(Material.BEE_NEST);
         object.withItem(Material.IRON_AXE);

@@ -3,7 +3,7 @@ package net.roxeez.advancement;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.condition.Conditions;
+import net.roxeez.advancement.data.TriggerData;
 import net.roxeez.advancement.display.Display;
 import net.roxeez.advancement.trigger.Trigger;
 import org.bukkit.NamespacedKey;
@@ -136,15 +136,15 @@ public class Advancement {
      *
      * @param name      Name of the criteria
      * @param trigger   Trigger used by this criteria
-     * @param condition Condition builder of this criteria trigger
+     * @param data      Trigger data builder of this criteria trigger
      *
      * @return Created criteria
      */
     @NotNull
-    public <T extends Conditions> Criteria addCriteria(@NotNull String name, @NotNull Trigger<T> trigger, @NotNull Consumer<T> condition) {
+    public <T extends TriggerData> Criteria addCriteria(@NotNull String name, @NotNull Trigger<T> trigger, @NotNull Consumer<T> data) {
         Preconditions.checkNotNull(name);
         Preconditions.checkNotNull(trigger);
-        Preconditions.checkNotNull(condition);
+        Preconditions.checkNotNull(data);
 
         if (criteria.containsKey(name)) {
             return criteria.get(name);
@@ -158,7 +158,7 @@ public class Advancement {
             throw new RuntimeException(e);
         }
 
-        condition.accept(object);
+        data.accept(object);
 
         Criteria criteria = new Criteria(name, trigger, object);
 

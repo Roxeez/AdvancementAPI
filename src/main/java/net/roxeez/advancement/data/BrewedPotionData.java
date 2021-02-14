@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
@@ -8,9 +8,9 @@ import net.roxeez.advancement.trigger.TriggerType;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Conditions used by {@link TriggerType#BREWED_POTION}
+ * Data used by {@link TriggerType#BREWED_POTION}
  */
-public class BrewedPotion implements Conditions {
+public class BrewedPotionData implements TriggerData {
 
     @Expose
     @SerializedName("potion")

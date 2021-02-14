@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.function.Consumer;
 
 /**
- * Conditions used by {@link TriggerType#INVENTORY_CHANGED}
+ * Data used by {@link TriggerType#INVENTORY_CHANGED}
  */
-public class InventoryChanged implements Conditions {
+public class InventoryChangedData implements TriggerData {
 
     @Expose
     @SerializedName("items")

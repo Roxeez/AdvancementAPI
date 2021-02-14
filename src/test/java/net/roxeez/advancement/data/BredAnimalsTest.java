@@ -1,4 +1,4 @@
-package net.roxeez.advancement.condition;
+package net.roxeez.advancement.data;
 
 import net.roxeez.advancement.TestBase;
 import net.roxeez.advancement.serialization.ObjectSerializer;
@@ -8,14 +8,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("BredAnimals tests")
-public class BredAnimalsTest extends TestBase {
+public class BredAnimalsDataTest extends TestBase {
 
     private final ObjectSerializer serializer = new ObjectSerializer();
 
     @Test
     @DisplayName("Check if BredAnimals is correctly serialized")
     public void serialization() {
-        BredAnimals object = new BredAnimals();
+        BredAnimalsData object = new BredAnimalsData();
 
         object.parent(EntityType.COW);
         object.partner(EntityType.COW);

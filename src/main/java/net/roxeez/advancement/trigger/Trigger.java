@@ -1,7 +1,7 @@
 package net.roxeez.advancement.trigger;
 
 import com.google.common.base.Preconditions;
-import net.roxeez.advancement.condition.Conditions;
+import net.roxeez.advancement.data.TriggerData;
 import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.NotNull;
 
@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
  *
  * @param <T> Type of the conditions bind to this trigger
  */
-public class Trigger<T extends Conditions> {
+public class Trigger<T extends TriggerData> {
 
     private final NamespacedKey key;
     private final Class<T> clazz;

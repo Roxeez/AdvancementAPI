@@ -1,22 +1,21 @@
 package net.roxeez.advancement.common;
 
-import net.roxeez.advancement.TestBase;
-import net.roxeez.advancement.serialization.ObjectSerializer;
+import net.roxeez.advancement.SerializerTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @DisplayName("Potion tests")
-public class PotionTest extends TestBase {
+public class PotionTest extends SerializerTest<Potion> {
 
-    private final ObjectSerializer serializer = new ObjectSerializer();
+    @Override
+    protected Potion getObject() {
+        return Potion.HARMING_II;
+    }
 
-    @Test
-    @DisplayName("Check if all potion are serialized using potion key")
-    public void serialization() {
-        for(Potion potion : Potion.values()) {
-            Assertions.assertEquals("\""+ potion.getKey().toString() + "\"", serializer.serialize(potion));
-        }
+    @Override
+    protected String getJson() {
+        return "\"minecraft:strong_harming\"";
     }
 
     @Test

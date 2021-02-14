@@ -1,27 +1,22 @@
 package net.roxeez.advancement.common;
 
-import net.roxeez.advancement.TestBase;
-import net.roxeez.advancement.serialization.ObjectSerializer;
-import org.junit.jupiter.api.Assertions;
+import net.roxeez.advancement.SerializerTest;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 
 @DisplayName("Range tests")
-public class RangeTest extends TestBase {
+public class RangeTest extends SerializerTest<Range<Integer>> {
 
-    private final ObjectSerializer serializer = new ObjectSerializer();
+    @Override
+    protected Range<Integer> getObject() {
+        return new Range<>(10, 10);
+    }
 
-    @Test
-    @DisplayName("Check if range is correctly serialized")
-    public void serialization() {
-        Range<Integer> range = new Range<>(10, 10);
-
-        String serialized = serializer.serialize(range);
-
-        Assertions.assertEquals("{\n" +
-                             "  \"min\": 10,\n" +
-                             "  \"max\": 10\n" +
-                             "}", serialized);
+    @Override
+    protected String getJson() {
+        return "{\n" +
+                "  \"min\": 10,\n" +
+                "  \"max\": 10\n" +
+                "}";
     }
 
 }
