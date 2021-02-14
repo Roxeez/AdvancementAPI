@@ -3,7 +3,7 @@ package net.roxeez.advancement;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.data.TriggerData;
+import net.roxeez.advancement.trigger.TriggerData;
 import net.roxeez.advancement.display.Display;
 import net.roxeez.advancement.trigger.Trigger;
 import org.bukkit.NamespacedKey;

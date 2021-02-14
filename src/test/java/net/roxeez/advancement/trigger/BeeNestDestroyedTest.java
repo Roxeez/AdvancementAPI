@@ -1,7 +1,5 @@
-package net.roxeez.advancement.data;
+package net.roxeez.advancement.trigger;
 
-import net.roxeez.advancement.trigger.Trigger;
-import net.roxeez.advancement.trigger.TriggerType;
 import org.bukkit.Material;
 import org.junit.jupiter.api.DisplayName;
 

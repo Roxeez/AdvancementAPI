@@ -1,13 +1,5 @@
 package net.roxeez.advancement.trigger;
 
-import net.roxeez.advancement.data.BeeNestDestroyedData;
-import net.roxeez.advancement.data.BredAnimalsData;
-import net.roxeez.advancement.data.BrewedPotionData;
-import net.roxeez.advancement.data.ChangedDimensionData;
-import net.roxeez.advancement.data.ChanneledLightningData;
-import net.roxeez.advancement.data.ConstructBeaconData;
-import net.roxeez.advancement.data.InventoryChangedData;
-import net.roxeez.advancement.data.PlacedBlockData;
 import org.jetbrains.annotations.NotNull;
 
 /**
