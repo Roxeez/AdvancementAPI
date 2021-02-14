@@ -55,6 +55,9 @@ public final class TriggerType {
     @NotNull
     public static final Trigger<ConstructBeaconData> CONSTRUCT_BEACON = new Trigger<>("construct_beacon", ConstructBeaconData.class);
 
+    @NotNull
+    public static final Trigger<ConsumeItemData> CONSUME_ITEM = new Trigger<>("consume_item", ConsumeItemData.class);
+
     private TriggerType() {
 
     }
