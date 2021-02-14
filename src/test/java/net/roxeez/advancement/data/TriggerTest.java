@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public abstract class TriggerTest<T extends TriggerData> extends SerializerTest<T> {
 
-    protected abstract Trigger<? extends TriggerData> getTrigger();
+    protected abstract Trigger<T> getTrigger();
 
     @Test
     @DisplayName("Check if trigger data match")

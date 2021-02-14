@@ -9,7 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 public class InventoryChangedTest extends TriggerTest<InventoryChangedData> {
 
     @Override
-    protected Trigger<? extends TriggerData> getTrigger() {
+    protected Trigger<InventoryChangedData> getTrigger() {
         return TriggerType.INVENTORY_CHANGED;
     }
 

@@ -10,7 +10,7 @@ import org.junit.jupiter.api.DisplayName;
 public class ChanneledLightningTest extends TriggerTest<ChanneledLightningData> {
 
     @Override
-    protected Trigger<? extends TriggerData> getTrigger() {
+    protected Trigger<ChanneledLightningData> getTrigger() {
         return TriggerType.CHANNELED_LIGHTNING;
     }
 
