@@ -10,7 +10,7 @@ public abstract class SerializerTest<T> extends TestBase {
     protected abstract T getObject();
     protected abstract String getJson();
 
-    private final ObjectSerializer serializer = new ObjectSerializer();
+    protected final ObjectSerializer serializer = new ObjectSerializer();
 
     @Test
     @DisplayName("Check if object is correctly serialized")

@@ -24,9 +24,7 @@ public class BrewedPotionTest extends TriggerTest<BrewedPotionData> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"potion\": \"minecraft:luck\"\n" +
-                "}";
+        return "{\"potion\":\"minecraft:luck\"}";
     }
 
 }

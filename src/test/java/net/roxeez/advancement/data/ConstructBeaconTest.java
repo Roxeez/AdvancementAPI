@@ -16,11 +16,7 @@ public class ConstructBeaconTest extends TriggerTest<ConstructBeaconData> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"level\": {\n" +
-                "    \"min\": 3\n" +
-                "  }\n" +
-                "}";
+        return "{\"level\":{\"min\":3}}";
     }
 
     @Override

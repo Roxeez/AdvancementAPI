@@ -27,19 +27,7 @@ public class ChanneledLightningTest extends TriggerTest<ChanneledLightningData> 
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"victims\": [\n" +
-                "    {\n" +
-                "      \"type\": \"minecraft:bat\"\n" +
-                "    },\n" +
-                "    {\n" +
-                "      \"type\": \"minecraft:chicken\"\n" +
-                "    },\n" +
-                "    {\n" +
-                "      \"type\": \"minecraft:bee\"\n" +
-                "    }\n" +
-                "  ]\n" +
-                "}";
+        return "{\"victims\":[{\"type\":\"minecraft:bat\"},{\"type\":\"minecraft:chicken\"},{\"type\":\"minecraft:bee\"}]}";
     }
 
 }

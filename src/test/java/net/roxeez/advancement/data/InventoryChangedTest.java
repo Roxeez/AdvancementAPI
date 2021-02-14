@@ -28,20 +28,7 @@ public class InventoryChangedTest extends TriggerTest<InventoryChangedData> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"items\": [\n" +
-                "    {\n" +
-                "      \"item\": \"minecraft:bedrock\"\n" +
-                "    },\n" +
-                "    {\n" +
-                "      \"item\": \"minecraft:iron_ore\",\n" +
-                "      \"count\": {\n" +
-                "        \"min\": 1,\n" +
-                "        \"max\": 10\n" +
-                "      }\n" +
-                "    }\n" +
-                "  ]\n" +
-                "}";
+        return "{\"items\":[{\"item\":\"minecraft:bedrock\"},{\"item\":\"minecraft:iron_ore\",\"count\":{\"min\":1,\"max\":10}}]}";
     }
 
 }

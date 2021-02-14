@@ -13,10 +13,7 @@ public class RangeTest extends SerializerTest<Range<Integer>> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"min\": 10,\n" +
-                "  \"max\": 10\n" +
-                "}";
+        return "{\"min\":10,\"max\":10}";
     }
 
 }

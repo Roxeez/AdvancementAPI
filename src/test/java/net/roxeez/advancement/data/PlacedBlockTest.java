@@ -24,9 +24,7 @@ public class PlacedBlockTest extends TriggerTest<PlacedBlockData> {
 
     @Override
     protected String getJson() {
-        return "{\n" +
-                "  \"block\": \"minecraft:bedrock\"\n" +
-                "}";
+        return "{\"block\":\"minecraft:bedrock\"}";
     }
 
 }
