@@ -2,11 +2,11 @@ package net.roxeez.advancement.serialization;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import javafx.util.Pair;
 import net.roxeez.advancement.data.DimensionType;
 import net.roxeez.advancement.data.EffectType;
 import net.roxeez.advancement.data.PotionType;
 import net.roxeez.advancement.display.FrameType;
+import net.roxeez.advancement.utility.KeyValue;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.EntityType;
@@ -26,7 +26,7 @@ public class ObjectSerializer {
             .registerTypeHierarchyAdapter(FrameType.class, new FrameTypeAdapter())
             .registerTypeHierarchyAdapter(Map.class, new MapAdapter())
             .registerTypeHierarchyAdapter(EffectType.class, new EffectTypeAdapter())
-            .registerTypeHierarchyAdapter(Pair.class, new PairAdapter())
+            .registerTypeHierarchyAdapter(KeyValue.class, new KeyValueAdapter())
             .create();
 
     public String serialize(Object object) {

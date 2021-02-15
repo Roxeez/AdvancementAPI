@@ -2,7 +2,7 @@ package net.roxeez.advancement.trigger;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import javafx.util.Pair;
+import net.roxeez.advancement.utility.KeyValue;
 import org.bukkit.Material;
 
 /**
@@ -16,7 +16,7 @@ public class EnterBlockData implements TriggerData {
 
     @Expose
     @SerializedName("state")
-    private Pair<String, String> state;
+    private KeyValue<String, String> state;
 
     /**
      * Set required block
@@ -34,7 +34,7 @@ public class EnterBlockData implements TriggerData {
      * @param value Value of the state
      */
     public void setState(String name, String value) {
-        this.state = new Pair<>(name, value);
+        this.state = new KeyValue<>(name, value);
     }
 
 }
