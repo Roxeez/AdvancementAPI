@@ -79,6 +79,14 @@ public final class TriggerType {
     @NotNull
     public static final Trigger<EnchantedItemData> ENCHANTED_ITEM = new Trigger<>("enchanted_item", EnchantedItemData.class);
 
+    /**
+     * Triggers when the player stands in a block. Checks every tick and will try to trigger for each successful match
+     */
+    @NotNull
+    public static final Trigger<EnterBlockData> ENTER_BLOCK = new Trigger<>("enter_block", EnterBlockData.class);
+
+    public static final Trigger<EntityHurtPlayerData> ENTITY_HURT_PLAYER = new Trigger<>("entity_hurt_player", EntityHurtPlayerData.class);
+
     private TriggerType() {
 
     }

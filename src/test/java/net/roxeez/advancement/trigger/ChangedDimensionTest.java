@@ -1,6 +1,6 @@
 package net.roxeez.advancement.trigger;
 
-import net.roxeez.advancement.common.DimensionType;
+import net.roxeez.advancement.data.DimensionType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("ChangedDimension tests")

@@ -3,7 +3,7 @@ package net.roxeez.advancement.trigger;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.common.Entity;
+import net.roxeez.advancement.data.Entity;
 import org.bukkit.entity.EntityType;
 import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;

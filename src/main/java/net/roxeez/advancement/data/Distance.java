@@ -1,8 +1,7 @@
-package net.roxeez.advancement.common;
+package net.roxeez.advancement.data;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import java.util.function.Consumer;
 
 public class Distance {
 

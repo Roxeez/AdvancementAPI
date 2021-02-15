@@ -2,8 +2,8 @@ package net.roxeez.advancement.trigger;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.common.Effect;
-import net.roxeez.advancement.common.EffectType;
+import net.roxeez.advancement.data.Effect;
+import net.roxeez.advancement.data.EffectType;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
