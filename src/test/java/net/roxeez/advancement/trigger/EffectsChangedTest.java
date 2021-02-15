@@ -1,6 +1,6 @@
 package net.roxeez.advancement.trigger;
 
-import net.roxeez.advancement.common.EffectType;
+import net.roxeez.advancement.data.EffectType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("EffectsChanged tests")

@@ -2,7 +2,7 @@ package net.roxeez.advancement.trigger;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.common.Range;
+import net.roxeez.advancement.data.Range;
 
 /**
  * Data used by {@link TriggerType#CONSTRUCT_BEACON}

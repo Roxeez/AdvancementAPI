@@ -2,7 +2,7 @@ package net.roxeez.advancement.trigger;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.common.Item;
+import net.roxeez.advancement.data.Item;
 import org.bukkit.Material;
 import java.util.function.Consumer;
 

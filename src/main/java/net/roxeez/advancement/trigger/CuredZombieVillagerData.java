@@ -2,7 +2,7 @@ package net.roxeez.advancement.trigger;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.common.Entity;
+import net.roxeez.advancement.data.Entity;
 import java.util.function.Consumer;
 
 public class CuredZombieVillagerData implements TriggerData {

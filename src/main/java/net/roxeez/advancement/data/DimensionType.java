@@ -1,4 +1,4 @@
-package net.roxeez.advancement.common;
+package net.roxeez.advancement.data;
 
 import com.google.common.base.Preconditions;
 import org.jetbrains.annotations.NotNull;

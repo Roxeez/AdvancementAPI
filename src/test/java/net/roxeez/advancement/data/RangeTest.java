@@ -1,4 +1,4 @@
-package net.roxeez.advancement.common;
+package net.roxeez.advancement.data;
 
 import net.roxeez.advancement.SerializerTest;
 import org.junit.jupiter.api.DisplayName;
