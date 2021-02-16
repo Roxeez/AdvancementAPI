@@ -30,7 +30,7 @@ public class LocationData {
 
     @Expose
     @SerializedName("position")
-    private Position position;
+    private PositionData position;
 
     @Expose
     @SerializedName("smokey")
@@ -49,8 +49,8 @@ public class LocationData {
         this.light = new Range<>(minimum, maximum);
     }
 
-    public void setPosition(Consumer<Position> consumer) {
-        this.position = new Position();
+    public void setPosition(Consumer<PositionData> consumer) {
+        this.position = new PositionData();
         consumer.accept(position);
     }
 

@@ -1,12 +1,12 @@
 package net.roxeez.advancement.trigger;
 
 import net.roxeez.advancement.Criteria;
-import net.roxeez.advancement.SerializerTest;
+import net.roxeez.advancement.data.DataTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public abstract class TriggerTest<T extends TriggerData> extends SerializerTest<T> {
+public abstract class TriggerTest<T extends TriggerData> extends DataTest<T> {
 
     protected abstract Trigger<T> getTrigger();
 

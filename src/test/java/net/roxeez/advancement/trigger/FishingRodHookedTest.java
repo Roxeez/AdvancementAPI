@@ -1,0 +1,29 @@
+package net.roxeez.advancement.trigger;
+
+import org.bukkit.entity.EntityType;
+
+public class FishingRodHookedTest extends TriggerTest<FishingRodHookedData> {
+
+    @Override
+    protected FishingRodHookedData getObject() {
+        FishingRodHookedData object = new FishingRodHookedData();
+        object.setRod(rod -> {
+            rod.setDurability(10);
+        });
+        object.setEntity(entity -> {
+            entity.setType(EntityType.TROPICAL_FISH);
+        });
+        return object;
+    }
+
+    @Override
+    protected String getJson() {
+        return "{\"entity\":{\"type\":\"minecraft:tropical_fish\"},\"rod\":{\"durability\":{\"min\":10}}}";
+    }
+
+    @Override
+    protected Trigger<FishingRodHookedData> getTrigger() {
+        return TriggerType.FISHING_ROD_HOOKED;
+    }
+
+}
