@@ -3,7 +3,7 @@ package net.roxeez.advancement.data;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Position {
+public class PositionData {
 
     @Expose
     @SerializedName("x")

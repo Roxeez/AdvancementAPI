@@ -3,7 +3,6 @@ package net.roxeez.advancement.data;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Item;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
@@ -29,7 +28,7 @@ public class EntityData {
 
     @Expose
     @SerializedName("flags")
-    private Flags flags;
+    private FlagsData flags;
 
     @Expose
     @SerializedName("location")
@@ -71,8 +70,8 @@ public class EntityData {
         consumer.accept(equipments);
     }
 
-    public void setFlags(Consumer<Flags> consumer) {
-        this.flags = new Flags();
+    public void setFlags(Consumer<FlagsData> consumer) {
+        this.flags = new FlagsData();
         consumer.accept(flags);
     }
 

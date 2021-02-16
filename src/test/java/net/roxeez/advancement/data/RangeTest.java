@@ -1,10 +1,9 @@
 package net.roxeez.advancement.data;
 
-import net.roxeez.advancement.SerializerTest;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("Range tests")
-public class RangeTest extends SerializerTest<Range<Integer>> {
+public class RangeTest extends DataTest<Range<Integer>> {
 
     @Override
     protected Range<Integer> getObject() {

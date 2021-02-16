@@ -1,12 +1,11 @@
 package net.roxeez.advancement.data;
 
-import net.roxeez.advancement.SerializerTest;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayName("Dimension tests")
-public class DimensionTypeTest extends SerializerTest<DimensionType> {
+@DisplayName("DimensionType tests")
+public class DimensionTypeTest extends DataTest<DimensionType> {
 
     @Override
     protected DimensionType getObject() {
@@ -19,7 +18,7 @@ public class DimensionTypeTest extends SerializerTest<DimensionType> {
     }
 
     @Test
-    @DisplayName("Check if Dimension#getByName return correct value")
+    @DisplayName("Check if DimensionType#getByName return correct value")
     public void getByNameShouldReturnCorrectDimension() {
         Assertions.assertEquals(DimensionType.getByName("the_end"), DimensionType.THE_END);
     }
