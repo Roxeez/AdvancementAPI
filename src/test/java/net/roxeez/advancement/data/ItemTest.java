@@ -6,11 +6,11 @@ import org.junit.jupiter.api.DisplayName;
 
 
 @DisplayName("Item tests")
-public class ItemTest extends SerializerTest<Item> {
+public class ItemTest extends SerializerTest<ItemData> {
 
     @Override
-    protected Item getObject() {
-        Item item = new Item();
+    protected ItemData getObject() {
+        ItemData item = new ItemData();
 
         item.setType(Material.BEDROCK);
         item.setCount(10, 15);

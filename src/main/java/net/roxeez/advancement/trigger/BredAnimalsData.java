@@ -3,7 +3,7 @@ package net.roxeez.advancement.trigger;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.data.Entity;
+import net.roxeez.advancement.data.EntityData;
 import org.bukkit.entity.EntityType;
 import org.jetbrains.annotations.NotNull;
 import java.util.function.Consumer;
@@ -15,24 +15,24 @@ public class BredAnimalsData implements TriggerData {
 
     @Expose
     @SerializedName("child")
-    private Entity child;
+    private EntityData child;
 
     @Expose
     @SerializedName("parent")
-    private Entity parent;
+    private EntityData parent;
 
     @Expose
     @SerializedName("partner")
-    private Entity partner;
+    private EntityData partner;
 
     /**
      * Set required child
      *
      * @param consumer Predicate of entity
      */
-    public void setChild(@NotNull Consumer<Entity> consumer) {
+    public void setChild(@NotNull Consumer<EntityData> consumer) {
         Preconditions.checkNotNull(consumer);
-        this.child = new Entity();
+        this.child = new EntityData();
         consumer.accept(this.child);
     }
 
@@ -74,9 +74,9 @@ public class BredAnimalsData implements TriggerData {
      *
      * @param consumer Predicate of entity
      */
-    public void setParent(@NotNull Consumer<Entity> consumer) {
+    public void setParent(@NotNull Consumer<EntityData> consumer) {
         Preconditions.checkNotNull(consumer);
-        this.parent = new Entity();
+        this.parent = new EntityData();
         consumer.accept(this.parent);
     }
 
@@ -85,9 +85,9 @@ public class BredAnimalsData implements TriggerData {
      *
      * @param consumer Predicate of entity
      */
-    public void setPartner(@NotNull Consumer<Entity> consumer) {
+    public void setPartner(@NotNull Consumer<EntityData> consumer) {
         Preconditions.checkNotNull(consumer);
-        this.partner = new Entity();
+        this.partner = new EntityData();
         consumer.accept(this.partner);
     }
 

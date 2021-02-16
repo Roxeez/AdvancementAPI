@@ -2,7 +2,7 @@ package net.roxeez.advancement.trigger;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.data.Damage;
+import net.roxeez.advancement.data.DamageData;
 import java.util.function.Consumer;
 
 /**
@@ -12,15 +12,15 @@ public class EntityHurtPlayerData implements TriggerData {
 
     @Expose
     @SerializedName("damage")
-    private Damage damage;
+    private DamageData damage;
 
     /**
      * Configuration damage settings
      *
      * @param consumer Consumer for damage configuration
      */
-    public void setDamage(Consumer<Damage> consumer) {
-        this.damage = new Damage();
+    public void setDamage(Consumer<DamageData> consumer) {
+        this.damage = new DamageData();
         consumer.accept(damage);
     }
 

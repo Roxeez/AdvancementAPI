@@ -3,7 +3,7 @@ package net.roxeez.advancement.trigger;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.data.Item;
+import net.roxeez.advancement.data.ItemData;
 import net.roxeez.advancement.AdvancementException;
 import org.bukkit.Material;
 import org.jetbrains.annotations.NotNull;
@@ -20,7 +20,7 @@ public class BeeNestDestroyedData implements TriggerData {
 
     @Expose
     @SerializedName("item")
-    private Item item;
+    private ItemData item;
 
     @Expose
     @SerializedName("numBeesInside")
@@ -52,9 +52,9 @@ public class BeeNestDestroyedData implements TriggerData {
      *
      * @param consumer Item predicate
      */
-    public void withItem(@NotNull Consumer<Item> consumer) {
+    public void withItem(@NotNull Consumer<ItemData> consumer) {
         Preconditions.checkNotNull(consumer);
-        this.item = new Item();
+        this.item = new ItemData();
         consumer.accept(item);
     }
 
