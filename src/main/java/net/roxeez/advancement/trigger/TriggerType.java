@@ -87,6 +87,16 @@ public final class TriggerType {
 
     public static final Trigger<EntityHurtPlayerData> ENTITY_HURT_PLAYER = new Trigger<>("entity_hurt_player", EntityHurtPlayerData.class);
 
+    public static final Trigger<EntityKilledPlayerData> ENTITY_KILLED_PLAYER = new Trigger<>("entity_killed_player", EntityKilledPlayerData.class);
+
+    public static final Trigger<FilledBucketData> FILLED_BUCKET = new Trigger<>("filled_bucket", FilledBucketData.class);
+
+    public static final Trigger<FishingRodHookedData> FISHING_ROD_HOOKED = new Trigger<>("fishing_rod_hooked", FishingRodHookedData.class);
+
+    public static final Trigger<HeroOfTheVillageData> HERO_OF_THE_VILLAGE = new Trigger<>("hero_of_the_village", HeroOfTheVillageData.class);
+
+    public static final Trigger<ImpossibleData> IMPOSSIBLE = new Trigger<>("impossible", ImpossibleData.class);
+
     private TriggerType() {
 
     }

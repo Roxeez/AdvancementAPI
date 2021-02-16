@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import org.bukkit.entity.EntityType;
 import java.util.function.Consumer;
 
-public class Damage {
+public class DamageData {
 
     @Expose
     @SerializedName("blocked")
@@ -17,11 +17,15 @@ public class Damage {
 
     @Expose
     @SerializedName("source")
-    private Entity source;
+    private EntityData source;
 
     @Expose
     @SerializedName("taken")
     private Range<Double> taken;
+
+    @Expose
+    @SerializedName("type")
+    private DamageType type;
 
     public void setBlocked(boolean blocked) {
         this.blocked = blocked;
@@ -35,8 +39,8 @@ public class Damage {
         this.dealt = new Range<>(damage);
     }
 
-    public void setSource(Consumer<Entity> consumer) {
-        this.source = new Entity();
+    public void setSource(Consumer<EntityData> consumer) {
+        this.source = new EntityData();
         consumer.accept(source);
     }
 
@@ -52,4 +56,8 @@ public class Damage {
         this.dealt = new Range<>(damage);
     }
 
+    public void setType(Consumer<DamageType> consumer) {
+        this.type = new DamageType();
+        consumer.accept(type);
+    }
 }

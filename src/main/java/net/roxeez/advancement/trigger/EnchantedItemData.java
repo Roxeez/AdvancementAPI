@@ -2,7 +2,7 @@ package net.roxeez.advancement.trigger;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.data.Item;
+import net.roxeez.advancement.data.ItemData;
 import net.roxeez.advancement.data.Range;
 import org.bukkit.Material;
 import java.util.function.Consumer;
@@ -14,7 +14,7 @@ public class EnchantedItemData implements TriggerData {
 
     @Expose
     @SerializedName("item")
-    private Item item;
+    private ItemData item;
 
     @Expose
     @SerializedName("levels")
@@ -34,8 +34,8 @@ public class EnchantedItemData implements TriggerData {
      *
      * @param consumer Consumer to build required item
      */
-    public void setItem(Consumer<Item> consumer) {
-        this.item = new Item();
+    public void setItem(Consumer<ItemData> consumer) {
+        this.item = new ItemData();
         consumer.accept(this.item);
     }
 

@@ -3,7 +3,7 @@ package net.roxeez.advancement.trigger;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.data.Entity;
+import net.roxeez.advancement.data.EntityData;
 import org.bukkit.entity.EntityType;
 import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class ChanneledLightningData implements TriggerData {
 
     @Expose
     @SerializedName("victims")
-    private final List<Entity> victims = new ArrayList<>();
+    private final List<EntityData> victims = new ArrayList<>();
 
     /**
      * Add a victim of type selected to required victims
@@ -34,9 +34,9 @@ public class ChanneledLightningData implements TriggerData {
      *
      * @param consumer Entity consumer
      */
-    public void addVictim(@NotNull Consumer<Entity> consumer) {
+    public void addVictim(@NotNull Consumer<EntityData> consumer) {
         Preconditions.checkNotNull(consumer);
-        Entity entity = new Entity();
+        EntityData entity = new EntityData();
         consumer.accept(entity);
 
         victims.add(entity);

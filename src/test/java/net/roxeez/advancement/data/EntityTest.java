@@ -5,11 +5,11 @@ import org.bukkit.entity.EntityType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("Entity tests")
-public class EntityTest extends SerializerTest<Entity> {
+public class EntityTest extends SerializerTest<EntityData> {
 
     @Override
-    protected Entity getObject() {
-        Entity entity = new Entity();
+    protected EntityData getObject() {
+        EntityData entity = new EntityData();
 
         entity.setType(EntityType.BAT);
 
