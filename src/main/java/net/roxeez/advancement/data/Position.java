@@ -1,9 +1,20 @@
 package net.roxeez.advancement.data;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Position {
 
+    @Expose
+    @SerializedName("x")
     private Range<Double> x;
+
+    @Expose
+    @SerializedName("y")
     private Range<Double> y;
+
+    @Expose
+    @SerializedName("z")
     private Range<Double> z;
 
     public void setX(double x) {
@@ -23,10 +34,10 @@ public class Position {
     }
 
     public void setY(double minimum, double maximum) {
-        this.x = new Range<>(minimum, maximum);
+        this.y = new Range<>(minimum, maximum);
     }
 
     public void setZ(double minimum, double maximum) {
-        this.x = new Range<>(minimum, maximum);
+        this.z = new Range<>(minimum, maximum);
     }
 }
