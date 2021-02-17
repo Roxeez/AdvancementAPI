@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 /**
  * Data used by {@link TriggerType#INVENTORY_CHANGED}
  */
-public class InventoryChangedData implements TriggerData {
+public class InventoryChanged implements TriggerData {
 
     @Expose
     @SerializedName("items")

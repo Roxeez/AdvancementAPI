@@ -4,11 +4,11 @@ import org.bukkit.Material;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("EnchantedItem tests")
-public class EnchantedItemTest extends TriggerTest<EnchantedItemData> {
+public class EnchantedItemTest extends TriggerTest<EnchantedItem> {
 
     @Override
-    protected EnchantedItemData getObject() {
-        EnchantedItemData object = new EnchantedItemData();
+    protected EnchantedItem getObject() {
+        EnchantedItem object = new EnchantedItem();
 
         object.setItem(item -> {
             item.setType(Material.DIAMOND_SWORD);
@@ -24,7 +24,7 @@ public class EnchantedItemTest extends TriggerTest<EnchantedItemData> {
     }
 
     @Override
-    protected Trigger<EnchantedItemData> getTrigger() {
+    protected Trigger<EnchantedItem> getTrigger() {
         return TriggerType.ENCHANTED_ITEM;
     }
 

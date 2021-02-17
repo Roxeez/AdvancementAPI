@@ -4,16 +4,16 @@ import org.bukkit.Material;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("BeeNestDestroyed trigger tests")
-public class BeeNestDestroyedTest extends TriggerTest<BeeNestDestroyedData> {
+public class BeeNestDestroyedTest extends TriggerTest<BeeNestDestroyed> {
 
     @Override
-    protected Trigger<BeeNestDestroyedData> getTrigger() {
+    protected Trigger<BeeNestDestroyed> getTrigger() {
         return TriggerType.BEE_NEST_DESTROYED;
     }
 
     @Override
-    protected BeeNestDestroyedData getObject() {
-        BeeNestDestroyedData object = new BeeNestDestroyedData();
+    protected BeeNestDestroyed getObject() {
+        BeeNestDestroyed object = new BeeNestDestroyed();
 
         object.setBlock(Material.BEE_NEST);
         object.withItem(Material.IRON_AXE);

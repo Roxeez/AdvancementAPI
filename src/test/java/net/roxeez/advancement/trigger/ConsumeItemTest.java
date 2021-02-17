@@ -4,11 +4,11 @@ import org.bukkit.Material;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("ConsumeItem tests")
-public class ConsumeItemTest extends TriggerTest<ConsumeItemData> {
+public class ConsumeItemTest extends TriggerTest<ConsumeItem> {
 
     @Override
-    protected ConsumeItemData getObject() {
-        ConsumeItemData object = new ConsumeItemData();
+    protected ConsumeItem getObject() {
+        ConsumeItem object = new ConsumeItem();
 
         object.setItem(Material.MELON);
 
@@ -21,7 +21,7 @@ public class ConsumeItemTest extends TriggerTest<ConsumeItemData> {
     }
 
     @Override
-    protected Trigger<ConsumeItemData> getTrigger() {
+    protected Trigger<ConsumeItem> getTrigger() {
         return TriggerType.CONSUME_ITEM;
     }
 

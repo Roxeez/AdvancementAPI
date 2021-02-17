@@ -4,17 +4,28 @@ import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.AdvancementException;
+import net.roxeez.advancement.data.ItemData;
+import net.roxeez.advancement.data.LocationData;
 import org.bukkit.Material;
 import org.jetbrains.annotations.NotNull;
+import java.util.function.Consumer;
 
 /**
  * Data used by {@link TriggerType#PLACED_BLOCK}
  */
-public class PlacedBlockData implements TriggerData {
+public class PlacedBlock implements TriggerData {
 
     @Expose
     @SerializedName("block")
     private Material block;
+
+    @Expose
+    @SerializedName("item")
+    private ItemData item;
+
+    @Expose
+    @SerializedName("location")
+    private LocationData location;
 
     /**
      * Set which block should be placed
@@ -30,6 +41,16 @@ public class PlacedBlockData implements TriggerData {
         }
 
         this.block = material;
+    }
+
+    public void setItem(Consumer<ItemData> consumer) {
+        this.item = new ItemData();
+        consumer.accept(item);
+    }
+
+    public void setLocation(Consumer<LocationData> consumer) {
+        this.location = new LocationData();
+        consumer.accept(location);
     }
 
 }

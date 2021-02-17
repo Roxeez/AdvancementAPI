@@ -4,16 +4,16 @@ import org.bukkit.entity.EntityType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("BredAnimals tests")
-public class BredAnimalsTest extends TriggerTest<BredAnimalsData> {
+public class BredAnimalsTest extends TriggerTest<BredAnimals> {
 
     @Override
-    protected Trigger<BredAnimalsData> getTrigger() {
+    protected Trigger<BredAnimals> getTrigger() {
         return TriggerType.BRED_ANIMALS;
     }
 
     @Override
-    protected BredAnimalsData getObject() {
-        BredAnimalsData object = new BredAnimalsData();
+    protected BredAnimals getObject() {
+        BredAnimals object = new BredAnimals();
 
         object.setParent(EntityType.COW);
         object.setPartner(EntityType.COW);

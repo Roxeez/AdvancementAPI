@@ -2,11 +2,11 @@ package net.roxeez.advancement.trigger;
 
 import org.bukkit.block.Biome;
 
-public class HeroOfTheVillageTest extends TriggerTest<HeroOfTheVillageData> {
+public class HeroOfTheVillageTest extends TriggerTest<HeroOfTheVillage> {
 
     @Override
-    protected HeroOfTheVillageData getObject() {
-        HeroOfTheVillageData object = new HeroOfTheVillageData();
+    protected HeroOfTheVillage getObject() {
+        HeroOfTheVillage object = new HeroOfTheVillage();
         object.setLocation(location -> {
             location.setBiome(Biome.BEACH);
         });
@@ -19,7 +19,7 @@ public class HeroOfTheVillageTest extends TriggerTest<HeroOfTheVillageData> {
     }
 
     @Override
-    protected Trigger<HeroOfTheVillageData> getTrigger() {
+    protected Trigger<HeroOfTheVillage> getTrigger() {
         return TriggerType.HERO_OF_THE_VILLAGE;
     }
 

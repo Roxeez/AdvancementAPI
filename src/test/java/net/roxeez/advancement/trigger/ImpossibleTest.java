@@ -1,10 +1,10 @@
 package net.roxeez.advancement.trigger;
 
-public class ImpossibleTest extends TriggerTest<ImpossibleData> {
+public class ImpossibleTest extends TriggerTest<Impossible> {
 
     @Override
-    protected ImpossibleData getObject() {
-        return new ImpossibleData();
+    protected Impossible getObject() {
+        return new Impossible();
     }
 
     @Override
@@ -13,7 +13,7 @@ public class ImpossibleTest extends TriggerTest<ImpossibleData> {
     }
 
     @Override
-    protected Trigger<ImpossibleData> getTrigger() {
+    protected Trigger<Impossible> getTrigger() {
         return TriggerType.IMPOSSIBLE;
     }
 

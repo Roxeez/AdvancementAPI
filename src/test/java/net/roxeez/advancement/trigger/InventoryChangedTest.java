@@ -4,16 +4,16 @@ import org.bukkit.Material;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("InventoryChanged tests")
-public class InventoryChangedTest extends TriggerTest<InventoryChangedData> {
+public class InventoryChangedTest extends TriggerTest<InventoryChanged> {
 
     @Override
-    protected Trigger<InventoryChangedData> getTrigger() {
+    protected Trigger<InventoryChanged> getTrigger() {
         return TriggerType.INVENTORY_CHANGED;
     }
 
     @Override
-    protected InventoryChangedData getObject() {
-        InventoryChangedData object = new InventoryChangedData();
+    protected InventoryChanged getObject() {
+        InventoryChanged object = new InventoryChanged();
 
         object.hasItem(Material.BEDROCK);
         object.hasItemMatching(item -> {

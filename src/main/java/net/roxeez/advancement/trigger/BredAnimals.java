@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 /**
  * Data used by {@link TriggerType#BRED_ANIMALS}
  */
-public class BredAnimalsData implements TriggerData {
+public class BredAnimals implements TriggerData {
 
     @Expose
     @SerializedName("child")

@@ -3,11 +3,11 @@ package net.roxeez.advancement.trigger;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("ConstructBeacon tests")
-public class ConstructBeaconTest extends TriggerTest<ConstructBeaconData> {
+public class ConstructBeaconTest extends TriggerTest<ConstructBeacon> {
 
     @Override
-    protected ConstructBeaconData getObject() {
-        ConstructBeaconData object = new ConstructBeaconData();
+    protected ConstructBeacon getObject() {
+        ConstructBeacon object = new ConstructBeacon();
 
         object.setLevel(3);
 
@@ -20,7 +20,7 @@ public class ConstructBeaconTest extends TriggerTest<ConstructBeaconData> {
     }
 
     @Override
-    protected Trigger<ConstructBeaconData> getTrigger() {
+    protected Trigger<ConstructBeacon> getTrigger() {
         return TriggerType.CONSTRUCT_BEACON;
     }
 
