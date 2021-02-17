@@ -7,7 +7,7 @@ import net.roxeez.advancement.data.Range;
 /**
  * Data used by {@link TriggerType#CONSTRUCT_BEACON}
  */
-public class ConstructBeaconData implements TriggerData {
+public class ConstructBeacon implements TriggerData {
 
     @Expose
     @SerializedName("level")

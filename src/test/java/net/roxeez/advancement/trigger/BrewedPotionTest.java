@@ -4,16 +4,16 @@ import net.roxeez.advancement.data.PotionType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("BrewedPotion tests")
-public class BrewedPotionTest extends TriggerTest<BrewedPotionData> {
+public class BrewedPotionTest extends TriggerTest<BrewedPotion> {
 
     @Override
-    protected Trigger<BrewedPotionData> getTrigger() {
+    protected Trigger<BrewedPotion> getTrigger() {
         return TriggerType.BREWED_POTION;
     }
 
     @Override
-    protected BrewedPotionData getObject() {
-        BrewedPotionData object = new BrewedPotionData();
+    protected BrewedPotion getObject() {
+        BrewedPotion object = new BrewedPotion();
 
         object.setPotion(PotionType.LUCK);
 

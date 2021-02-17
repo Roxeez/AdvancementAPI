@@ -4,16 +4,16 @@ import org.bukkit.Material;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("PlacedBlock tests")
-public class PlacedBlockTest extends TriggerTest<PlacedBlockData> {
+public class PlacedBlockTest extends TriggerTest<PlacedBlock> {
 
     @Override
-    protected Trigger<PlacedBlockData> getTrigger() {
+    protected Trigger<PlacedBlock> getTrigger() {
         return TriggerType.PLACED_BLOCK;
     }
 
     @Override
-    protected PlacedBlockData getObject() {
-        PlacedBlockData object = new PlacedBlockData();
+    protected PlacedBlock getObject() {
+        PlacedBlock object = new PlacedBlock();
 
         object.setBlock(Material.BEDROCK);
 

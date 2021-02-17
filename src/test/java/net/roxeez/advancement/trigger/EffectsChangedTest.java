@@ -4,11 +4,11 @@ import net.roxeez.advancement.data.EffectType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("EffectsChanged tests")
-public class EffectsChangedTest extends TriggerTest<EffectsChangedData> {
+public class EffectsChangedTest extends TriggerTest<EffectsChanged> {
 
     @Override
-    protected EffectsChangedData getObject() {
-        EffectsChangedData object = new EffectsChangedData();
+    protected EffectsChanged getObject() {
+        EffectsChanged object = new EffectsChanged();
 
         object.addEffect(EffectType.ABSORPTION, effect -> {
             effect.setDuration(1);
@@ -24,7 +24,7 @@ public class EffectsChangedTest extends TriggerTest<EffectsChangedData> {
     }
 
     @Override
-    protected Trigger<EffectsChangedData> getTrigger() {
+    protected Trigger<EffectsChanged> getTrigger() {
         return TriggerType.EFFECTS_CHANGED;
     }
 

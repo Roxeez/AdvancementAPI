@@ -3,11 +3,11 @@ package net.roxeez.advancement.trigger;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("CuredZombieVillager tests")
-public class CuredZombieVillagerTest extends TriggerTest<CuredZombieVillagerData> {
+public class CuredZombieVillagerTest extends TriggerTest<CuredZombieVillager> {
 
     @Override
-    protected CuredZombieVillagerData getObject() {
-        CuredZombieVillagerData object = new CuredZombieVillagerData();
+    protected CuredZombieVillager getObject() {
+        CuredZombieVillager object = new CuredZombieVillager();
 
         object.setVillager(entity -> {
             entity.setDistance(distance -> {
@@ -30,7 +30,7 @@ public class CuredZombieVillagerTest extends TriggerTest<CuredZombieVillagerData
     }
 
     @Override
-    protected Trigger<CuredZombieVillagerData> getTrigger() {
+    protected Trigger<CuredZombieVillager> getTrigger() {
         return TriggerType.CURED_ZOMBIE_VILLAGER;
     }
 

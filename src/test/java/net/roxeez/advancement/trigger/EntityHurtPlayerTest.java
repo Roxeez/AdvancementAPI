@@ -2,11 +2,11 @@ package net.roxeez.advancement.trigger;
 
 import org.bukkit.entity.EntityType;
 
-public class EntityHurtPlayerTest extends TriggerTest<EntityHurtPlayerData> {
+public class EntityHurtPlayerTest extends TriggerTest<EntityHurtPlayer> {
 
     @Override
-    protected EntityHurtPlayerData getObject() {
-        EntityHurtPlayerData object = new EntityHurtPlayerData();
+    protected EntityHurtPlayer getObject() {
+        EntityHurtPlayer object = new EntityHurtPlayer();
 
         object.setDamage(damage -> {
             damage.setSource(EntityType.BEE);
@@ -22,7 +22,7 @@ public class EntityHurtPlayerTest extends TriggerTest<EntityHurtPlayerData> {
     }
 
     @Override
-    protected Trigger<EntityHurtPlayerData> getTrigger() {
+    protected Trigger<EntityHurtPlayer> getTrigger() {
         return TriggerType.ENTITY_HURT_PLAYER;
     }
 

@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Data used by {@link TriggerType#BREWED_POTION}
  */
-public class BrewedPotionData implements TriggerData {
+public class BrewedPotion implements TriggerData {
 
     @Expose
     @SerializedName("potion")

@@ -2,11 +2,11 @@ package net.roxeez.advancement.trigger;
 
 import org.bukkit.entity.EntityType;
 
-public class FishingRodHookedTest extends TriggerTest<FishingRodHookedData> {
+public class FishingRodHookedTest extends TriggerTest<FishingRodHooked> {
 
     @Override
-    protected FishingRodHookedData getObject() {
-        FishingRodHookedData object = new FishingRodHookedData();
+    protected FishingRodHooked getObject() {
+        FishingRodHooked object = new FishingRodHooked();
         object.setRod(rod -> {
             rod.setDurability(10);
         });
@@ -22,7 +22,7 @@ public class FishingRodHookedTest extends TriggerTest<FishingRodHookedData> {
     }
 
     @Override
-    protected Trigger<FishingRodHookedData> getTrigger() {
+    protected Trigger<FishingRodHooked> getTrigger() {
         return TriggerType.FISHING_ROD_HOOKED;
     }
 

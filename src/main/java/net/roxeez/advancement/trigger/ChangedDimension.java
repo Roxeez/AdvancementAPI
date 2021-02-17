@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Data used by {@link TriggerType#CHANGED_DIMENSION}
  */
-public class ChangedDimensionData implements TriggerData {
+public class ChangedDimension implements TriggerData {
 
     @Expose
     @SerializedName("from")

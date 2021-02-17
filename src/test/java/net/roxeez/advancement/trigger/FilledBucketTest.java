@@ -2,11 +2,11 @@ package net.roxeez.advancement.trigger;
 
 import org.bukkit.Material;
 
-public class FilledBucketTest extends TriggerTest<FilledBucketData> {
+public class FilledBucketTest extends TriggerTest<FilledBucket> {
 
     @Override
-    protected FilledBucketData getObject() {
-        FilledBucketData object = new FilledBucketData();
+    protected FilledBucket getObject() {
+        FilledBucket object = new FilledBucket();
         object.setItem(item -> {
             item.setType(Material.WATER_BUCKET);
         });
@@ -19,7 +19,7 @@ public class FilledBucketTest extends TriggerTest<FilledBucketData> {
     }
 
     @Override
-    protected Trigger<FilledBucketData> getTrigger() {
+    protected Trigger<FilledBucket> getTrigger() {
         return TriggerType.FILLED_BUCKET;
     }
 

@@ -4,11 +4,11 @@ import org.bukkit.Material;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("EnterBlocck tests")
-public class EnterBlockTest extends TriggerTest<EnterBlockData> {
+public class EnterBlockTest extends TriggerTest<EnterBlock> {
 
     @Override
-    protected EnterBlockData getObject() {
-        EnterBlockData object = new EnterBlockData();
+    protected EnterBlock getObject() {
+        EnterBlock object = new EnterBlock();
         object.setBlock(Material.ROSE_BUSH);
         object.setState("half", "lower");
         return object;
@@ -20,7 +20,7 @@ public class EnterBlockTest extends TriggerTest<EnterBlockData> {
     }
 
     @Override
-    protected Trigger<EnterBlockData> getTrigger() {
+    protected Trigger<EnterBlock> getTrigger() {
         return TriggerType.ENTER_BLOCK;
     }
 

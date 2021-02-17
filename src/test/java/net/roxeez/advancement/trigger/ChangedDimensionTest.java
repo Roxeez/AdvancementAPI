@@ -4,16 +4,16 @@ import net.roxeez.advancement.data.DimensionType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("ChangedDimension tests")
-public class ChangedDimensionTest extends TriggerTest<ChangedDimensionData> {
+public class ChangedDimensionTest extends TriggerTest<ChangedDimension> {
 
     @Override
-    protected Trigger<ChangedDimensionData> getTrigger() {
+    protected Trigger<ChangedDimension> getTrigger() {
         return TriggerType.CHANGED_DIMENSION;
     }
 
     @Override
-    protected ChangedDimensionData getObject() {
-        ChangedDimensionData object = new ChangedDimensionData();
+    protected ChangedDimension getObject() {
+        ChangedDimension object = new ChangedDimension();
 
         object.setOrigin(DimensionType.OVERWORLD);
         object.setDestination(DimensionType.THE_NETHER);

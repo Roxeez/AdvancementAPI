@@ -2,11 +2,11 @@ package net.roxeez.advancement.trigger;
 
 import org.bukkit.entity.EntityType;
 
-public class EntityKilledPlayerTest extends TriggerTest<EntityKilledPlayerData> {
+public class EntityKilledPlayerTest extends TriggerTest<EntityKilledPlayer> {
 
     @Override
-    protected EntityKilledPlayerData getObject() {
-        EntityKilledPlayerData object = new EntityKilledPlayerData();
+    protected EntityKilledPlayer getObject() {
+        EntityKilledPlayer object = new EntityKilledPlayer();
         object.setEntity(entity -> {
             entity.setType(EntityType.SKELETON);
         });
@@ -22,7 +22,7 @@ public class EntityKilledPlayerTest extends TriggerTest<EntityKilledPlayerData> 
     }
 
     @Override
-    protected Trigger<EntityKilledPlayerData> getTrigger() {
+    protected Trigger<EntityKilledPlayer> getTrigger() {
         return TriggerType.ENTITY_KILLED_PLAYER;
     }
 

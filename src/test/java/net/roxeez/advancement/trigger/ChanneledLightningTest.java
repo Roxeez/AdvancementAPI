@@ -4,16 +4,16 @@ import org.bukkit.entity.EntityType;
 import org.junit.jupiter.api.DisplayName;
 
 @DisplayName("ChanneledLightning tests")
-public class ChanneledLightningTest extends TriggerTest<ChanneledLightningData> {
+public class ChanneledLightningTest extends TriggerTest<ChanneledLightning> {
 
     @Override
-    protected Trigger<ChanneledLightningData> getTrigger() {
+    protected Trigger<ChanneledLightning> getTrigger() {
         return TriggerType.CHANNELED_LIGHTNING;
     }
 
     @Override
-    protected ChanneledLightningData getObject() {
-        ChanneledLightningData object = new ChanneledLightningData();
+    protected ChanneledLightning getObject() {
+        ChanneledLightning object = new ChanneledLightning();
 
         object.addVictim(EntityType.BAT);
         object.addVictim(EntityType.CHICKEN);

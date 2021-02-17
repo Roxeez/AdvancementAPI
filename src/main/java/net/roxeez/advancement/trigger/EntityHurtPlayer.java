@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 /**
  * Data used by {@link TriggerType#ENTITY_HURT_PLAYER}
  */
-public class EntityHurtPlayerData implements TriggerData {
+public class EntityHurtPlayer implements TriggerData {
 
     @Expose
     @SerializedName("damage")
