@@ -6,7 +6,7 @@ import net.roxeez.advancement.data.ItemData;
 import net.roxeez.advancement.data.LocationData;
 import java.util.function.Consumer;
 
-public class ItemUsedOnBlock implements TriggerData {
+public class ItemUsedOnBlock implements Trigger {
 
     @Expose
     @SerializedName("location")

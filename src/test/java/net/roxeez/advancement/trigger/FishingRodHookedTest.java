@@ -22,7 +22,7 @@ public class FishingRodHookedTest extends TriggerTest<FishingRodHooked> {
     }
 
     @Override
-    protected Trigger<FishingRodHooked> getTrigger() {
+    protected TriggerWrapper<FishingRodHooked> getTrigger() {
         return TriggerType.FISHING_ROD_HOOKED;
     }
 

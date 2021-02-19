@@ -19,7 +19,7 @@ public class HeroOfTheVillageTest extends TriggerTest<HeroOfTheVillage> {
     }
 
     @Override
-    protected Trigger<HeroOfTheVillage> getTrigger() {
+    protected TriggerWrapper<HeroOfTheVillage> getTrigger() {
         return TriggerType.HERO_OF_THE_VILLAGE;
     }
 

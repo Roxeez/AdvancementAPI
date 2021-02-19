@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import java.util.function.Consumer;
 
-public class Location implements TriggerData {
+public class Location implements Trigger {
 
     @Expose
     @SerializedName("location")

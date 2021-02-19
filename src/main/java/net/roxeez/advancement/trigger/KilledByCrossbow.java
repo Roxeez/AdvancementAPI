@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class KilledByCrossbow implements TriggerData {
+public class KilledByCrossbow implements Trigger {
 
     @Expose
     @SerializedName("unique_entity_types")

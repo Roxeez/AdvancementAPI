@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 /**
  * Data used by {@link TriggerType#CONSUME_ITEM}
  */
-public class ConsumeItem implements TriggerData {
+public class ConsumeItem implements Trigger {
 
     @Expose
     @SerializedName("item")

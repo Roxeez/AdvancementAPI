@@ -20,7 +20,7 @@ public class ConstructBeaconTest extends TriggerTest<ConstructBeacon> {
     }
 
     @Override
-    protected Trigger<ConstructBeacon> getTrigger() {
+    protected TriggerWrapper<ConstructBeacon> getTrigger() {
         return TriggerType.CONSTRUCT_BEACON;
     }
 

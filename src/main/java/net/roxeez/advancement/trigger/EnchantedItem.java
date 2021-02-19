@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 /**
  * Data used by {@link TriggerType#ENCHANTED_ITEM}
  */
-public class EnchantedItem implements TriggerData {
+public class EnchantedItem implements Trigger {
 
     @Expose
     @SerializedName("item")

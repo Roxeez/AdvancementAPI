@@ -6,7 +6,7 @@ import net.roxeez.advancement.data.EntityData;
 import net.roxeez.advancement.data.ItemData;
 import java.util.function.Consumer;
 
-public class FishingRodHooked implements TriggerData {
+public class FishingRodHooked implements Trigger {
 
     @Expose
     @SerializedName("entity")

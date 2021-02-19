@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 /**
  * Data used by {@link TriggerType#BEE_NEST_DESTROYED}
  */
-public class BeeNestDestroyed implements TriggerData {
+public class BeeNestDestroyed implements Trigger {
 
     @Expose
     @SerializedName("block")

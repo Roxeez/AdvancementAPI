@@ -13,7 +13,7 @@ public class ImpossibleTest extends TriggerTest<Impossible> {
     }
 
     @Override
-    protected Trigger<Impossible> getTrigger() {
+    protected TriggerWrapper<Impossible> getTrigger() {
         return TriggerType.IMPOSSIBLE;
     }
 

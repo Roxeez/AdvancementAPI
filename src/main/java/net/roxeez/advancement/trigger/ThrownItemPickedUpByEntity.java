@@ -6,7 +6,7 @@ import net.roxeez.advancement.data.EntityData;
 import net.roxeez.advancement.data.ItemData;
 import java.util.function.Consumer;
 
-public class PlayerInteractedWithEntity implements Trigger {
+public class ThrownItemPickedUpByEntity implements Trigger {
 
     @Expose
     @SerializedName("item")
@@ -16,14 +16,13 @@ public class PlayerInteractedWithEntity implements Trigger {
     @SerializedName("entity")
     private EntityData entity;
 
-    public void setItem(Consumer<ItemData> consumer) {
-        this.item = new ItemData();
-        consumer.accept(item);
-    }
-
     public void setEntity(Consumer<EntityData> consumer) {
         this.entity = new EntityData();
         consumer.accept(entity);
     }
 
+    public void setItem(Consumer<ItemData> consumer) {
+        this.item = new ItemData();
+        consumer.accept(item);
+    }
 }

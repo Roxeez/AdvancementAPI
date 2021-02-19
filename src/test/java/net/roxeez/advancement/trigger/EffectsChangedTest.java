@@ -24,7 +24,7 @@ public class EffectsChangedTest extends TriggerTest<EffectsChanged> {
     }
 
     @Override
-    protected Trigger<EffectsChanged> getTrigger() {
+    protected TriggerWrapper<EffectsChanged> getTrigger() {
         return TriggerType.EFFECTS_CHANGED;
     }
 

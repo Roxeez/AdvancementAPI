@@ -4,7 +4,7 @@ import net.roxeez.advancement.data.DistanceData;
 import net.roxeez.advancement.data.LocationData;
 import java.util.function.Consumer;
 
-public class NetherTravel implements TriggerData {
+public class NetherTravel implements Trigger {
 
     private LocationData entered;
     private LocationData exited;

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.data.ItemData;
 import java.util.function.Consumer;
 
-public class FilledBucket implements TriggerData {
+public class FilledBucket implements Trigger {
 
     @Expose
     @SerializedName("item")

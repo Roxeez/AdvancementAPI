@@ -3,8 +3,8 @@ package net.roxeez.advancement;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.trigger.TriggerData;
 import net.roxeez.advancement.trigger.Trigger;
+import net.roxeez.advancement.trigger.TriggerWrapper;
 import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.NotNull;
 
@@ -18,9 +18,9 @@ public class Criteria {
 
     @Expose
     @SerializedName("conditions")
-    private final TriggerData data;
+    private final Trigger data;
 
-    public Criteria(@NotNull String name, @NotNull Trigger<?> trigger, @NotNull TriggerData data) {
+    public Criteria(@NotNull String name, @NotNull TriggerWrapper<?> trigger, @NotNull Trigger data) {
         Preconditions.checkNotNull(name);
         Preconditions.checkNotNull(trigger);
         Preconditions.checkNotNull(data);

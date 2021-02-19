@@ -3,9 +3,9 @@ package net.roxeez.advancement;
 import com.google.common.base.Preconditions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import net.roxeez.advancement.trigger.TriggerData;
-import net.roxeez.advancement.display.Display;
 import net.roxeez.advancement.trigger.Trigger;
+import net.roxeez.advancement.display.Display;
+import net.roxeez.advancement.trigger.TriggerWrapper;
 import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
@@ -141,7 +141,7 @@ public class Advancement {
      * @return Created criteria
      */
     @NotNull
-    public <T extends TriggerData> Criteria addCriteria(@NotNull String name, @NotNull Trigger<T> trigger, @NotNull Consumer<T> data) {
+    public <T extends Trigger> Criteria addCriteria(@NotNull String name, @NotNull TriggerWrapper<T> trigger, @NotNull Consumer<T> data) {
         Preconditions.checkNotNull(name);
         Preconditions.checkNotNull(trigger);
         Preconditions.checkNotNull(data);

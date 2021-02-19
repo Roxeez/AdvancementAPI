@@ -11,7 +11,7 @@ import java.util.function.Consumer;
 /**
  * Data used by {@link TriggerType#EFFECTS_CHANGED}
  */
-public class EffectsChanged implements TriggerData {
+public class EffectsChanged implements Trigger {
 
     @Expose
     @SerializedName("effects")
