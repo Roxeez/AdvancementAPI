@@ -8,9 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 
-/**
- * Data used by {@link TriggerType#EFFECTS_CHANGED}
- */
 public class EffectsChanged implements Trigger {
 
     @Expose

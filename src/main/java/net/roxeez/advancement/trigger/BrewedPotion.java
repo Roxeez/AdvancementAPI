@@ -6,9 +6,6 @@ import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.data.PotionType;
 import org.jetbrains.annotations.NotNull;
 
-/**
- * Data used by {@link TriggerType#BREWED_POTION}
- */
 public class BrewedPotion implements Trigger {
 
     @Expose

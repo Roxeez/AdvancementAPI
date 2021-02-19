@@ -5,9 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.data.DamageData;
 import java.util.function.Consumer;
 
-/**
- * Data used by {@link TriggerType#ENTITY_HURT_PLAYER}
- */
 public class EntityHurtPlayer implements Trigger {
 
     @Expose

@@ -5,9 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.utility.KeyValue;
 import org.bukkit.Material;
 
-/**
- * Data used by {@link TriggerType#ENTER_BLOCK}
- */
 public class EnterBlock implements Trigger {
 
     @Expose

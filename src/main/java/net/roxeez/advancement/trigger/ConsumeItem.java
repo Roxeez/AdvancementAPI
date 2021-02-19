@@ -6,9 +6,6 @@ import net.roxeez.advancement.data.ItemData;
 import org.bukkit.Material;
 import java.util.function.Consumer;
 
-/**
- * Data used by {@link TriggerType#CONSUME_ITEM}
- */
 public class ConsumeItem implements Trigger {
 
     @Expose

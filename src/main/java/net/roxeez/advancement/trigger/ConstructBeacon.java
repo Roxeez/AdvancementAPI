@@ -4,9 +4,6 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.data.Range;
 
-/**
- * Data used by {@link TriggerType#CONSTRUCT_BEACON}
- */
 public class ConstructBeacon implements Trigger {
 
     @Expose

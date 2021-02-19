@@ -9,9 +9,6 @@ import org.bukkit.Material;
 import org.jetbrains.annotations.NotNull;
 import java.util.function.Consumer;
 
-/**
- * Data used by {@link TriggerType#BEE_NEST_DESTROYED}
- */
 public class BeeNestDestroyed implements Trigger {
 
     @Expose

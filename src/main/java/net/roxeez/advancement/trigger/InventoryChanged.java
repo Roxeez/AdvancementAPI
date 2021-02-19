@@ -10,9 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-/**
- * Data used by {@link TriggerType#INVENTORY_CHANGED}
- */
 public class InventoryChanged implements Trigger {
 
     @Expose

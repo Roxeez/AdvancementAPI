@@ -7,9 +7,6 @@ import net.roxeez.advancement.data.Range;
 import org.bukkit.Material;
 import java.util.function.Consumer;
 
-/**
- * Data used by {@link TriggerType#ENCHANTED_ITEM}
- */
 public class EnchantedItem implements Trigger {
 
     @Expose

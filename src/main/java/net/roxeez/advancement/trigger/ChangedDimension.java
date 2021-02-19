@@ -6,9 +6,6 @@ import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.data.DimensionType;
 import org.jetbrains.annotations.NotNull;
 
-/**
- * Data used by {@link TriggerType#CHANGED_DIMENSION}
- */
 public class ChangedDimension implements Trigger {
 
     @Expose
