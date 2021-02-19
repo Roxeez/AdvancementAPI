@@ -17,17 +17,17 @@ public class CobblestoneAdvancement implements AdvancementCreator {
         
         Advancement advancement = new Advancement(context.getPlugin(), ID);
 
-        advancement.display(x -> {
-            x.title("Some Cobblestone");
-            x.description("Get 3 cobblestone");
-            x.background(BackgroundType.STONE);
-            x.icon(Material.COBBLESTONE);
+        advancement.setDisplay(x -> {
+            x.setTitle("Some Cobblestone");
+            x.setDescription("Get 3 cobblestone");
+            x.setBackground(BackgroundType.STONE);
+            x.setIcon(Material.COBBLESTONE);
         });
 
-        advancement.addCriteria("cobblestone", TriggerType.INVENTORY_CHANGED, condition -> {
-            condition.hasItemMatching(item -> {
-                item.is(Material.COBBLESTONE);
-                item.count(3);
+        advancement.addCriteria("cobblestone", TriggerType.INVENTORY_CHANGED, trigger -> {
+            trigger.hasItemMatching(item -> {
+                item.setType(Material.COBBLESTONE);
+                item.setCount(3);
             });
         });
         
@@ -48,16 +48,16 @@ public class StonePickaxeAdvancement implements AdvancementCreator {
 
         Advancement advancement = new Advancement(context.getPlugin(), ID);
 
-        advancement.parent(new NamespacedKey(context.getPlugin(), CobblestoneAdvancement.ID));
+        advancement.setParent(new NamespacedKey(context.getPlugin(), CobblestoneAdvancement.ID));
 
-        advancement.display(x -> {
-            x.title("Stone Pickaxe");
-            x.description("Craft a stone pickaxe with your 3 cobblestone");
-            x.icon(Material.STONE_PICKAXE);
+        advancement.setDisplay(x -> {
+            x.setTitle("Stone Pickaxe");
+            x.setDescription("Craft a stone pickaxe with your 3 cobblestone");
+            x.setIcon(Material.STONE_PICKAXE);
         });
 
-        advancement.addCriteria("pickaxe", TriggerType.INVENTORY_CHANGED, condition -> {
-            condition.hasItem(Material.STONE_PICKAXE);
+        advancement.addCriteria("pickaxe", TriggerType.INVENTORY_CHANGED, trigger -> {
+            trigger.hasItem(Material.STONE_PICKAXE);
         });
 
         return advancement;

@@ -10,9 +10,6 @@ import org.bukkit.Material;
 import org.jetbrains.annotations.NotNull;
 import java.util.function.Consumer;
 
-/**
- * Data used by {@link TriggerType#PLACED_BLOCK}
- */
 public class PlacedBlock implements Trigger {
 
     @Expose

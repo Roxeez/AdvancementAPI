@@ -10,9 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-/**
- * Data used by {@link TriggerType#CHANNELED_LIGHTNING}
- */
 public class ChanneledLightning implements Trigger {
 
     @Expose

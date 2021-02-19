@@ -8,9 +8,6 @@ import org.bukkit.entity.EntityType;
 import org.jetbrains.annotations.NotNull;
 import java.util.function.Consumer;
 
-/**
- * Data used by {@link TriggerType#BRED_ANIMALS}
- */
 public class BredAnimals implements Trigger {
 
     @Expose

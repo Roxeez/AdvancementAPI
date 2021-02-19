@@ -5,9 +5,9 @@ import org.bukkit.NamespacedKey;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Represent a trigger
+ * Represent a trigger (name and clazz representing it)
  *
- * @param <T> Type of the conditions bind to this trigger
+ * @param <T> Type of the trigger
  */
 public class TriggerWrapper<T extends Trigger> {
 
