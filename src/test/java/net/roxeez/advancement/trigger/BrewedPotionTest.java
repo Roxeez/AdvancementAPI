@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 public class BrewedPotionTest extends TriggerTest<BrewedPotion> {
 
     @Override
-    protected Trigger<BrewedPotion> getTrigger() {
+    protected TriggerWrapper<BrewedPotion> getTrigger() {
         return TriggerType.BREWED_POTION;
     }
 

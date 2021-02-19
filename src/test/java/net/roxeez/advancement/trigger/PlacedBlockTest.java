@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 public class PlacedBlockTest extends TriggerTest<PlacedBlock> {
 
     @Override
-    protected Trigger<PlacedBlock> getTrigger() {
+    protected TriggerWrapper<PlacedBlock> getTrigger() {
         return TriggerType.PLACED_BLOCK;
     }
 

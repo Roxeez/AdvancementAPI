@@ -30,7 +30,7 @@ public class CuredZombieVillagerTest extends TriggerTest<CuredZombieVillager> {
     }
 
     @Override
-    protected Trigger<CuredZombieVillager> getTrigger() {
+    protected TriggerWrapper<CuredZombieVillager> getTrigger() {
         return TriggerType.CURED_ZOMBIE_VILLAGER;
     }
 

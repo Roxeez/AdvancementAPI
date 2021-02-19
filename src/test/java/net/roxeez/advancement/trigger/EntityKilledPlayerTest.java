@@ -22,7 +22,7 @@ public class EntityKilledPlayerTest extends TriggerTest<EntityKilledPlayer> {
     }
 
     @Override
-    protected Trigger<EntityKilledPlayer> getTrigger() {
+    protected TriggerWrapper<EntityKilledPlayer> getTrigger() {
         return TriggerType.ENTITY_KILLED_PLAYER;
     }
 

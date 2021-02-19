@@ -24,7 +24,7 @@ public class EnchantedItemTest extends TriggerTest<EnchantedItem> {
     }
 
     @Override
-    protected Trigger<EnchantedItem> getTrigger() {
+    protected TriggerWrapper<EnchantedItem> getTrigger() {
         return TriggerType.ENCHANTED_ITEM;
     }
 

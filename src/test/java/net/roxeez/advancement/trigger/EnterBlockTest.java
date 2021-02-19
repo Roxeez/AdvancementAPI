@@ -20,7 +20,7 @@ public class EnterBlockTest extends TriggerTest<EnterBlock> {
     }
 
     @Override
-    protected Trigger<EnterBlock> getTrigger() {
+    protected TriggerWrapper<EnterBlock> getTrigger() {
         return TriggerType.ENTER_BLOCK;
     }
 

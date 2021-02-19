@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.data.LocationData;
 import java.util.function.Consumer;
 
-public class HeroOfTheVillage implements Trigger {
+public class SleptInBed implements Trigger {
 
     @Expose
     @SerializedName("location")

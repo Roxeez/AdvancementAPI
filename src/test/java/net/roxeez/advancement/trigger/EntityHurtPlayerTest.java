@@ -22,7 +22,7 @@ public class EntityHurtPlayerTest extends TriggerTest<EntityHurtPlayer> {
     }
 
     @Override
-    protected Trigger<EntityHurtPlayer> getTrigger() {
+    protected TriggerWrapper<EntityHurtPlayer> getTrigger() {
         return TriggerType.ENTITY_HURT_PLAYER;
     }
 

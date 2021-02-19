@@ -1,5 +1,5 @@
 package net.roxeez.advancement.trigger;
 
-public class Impossible implements TriggerData {
+public class Impossible implements Trigger {
 
 }

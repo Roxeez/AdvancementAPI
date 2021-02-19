@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import net.roxeez.advancement.data.EntityData;
 import java.util.function.Consumer;
 
-public class CuredZombieVillager implements TriggerData {
+public class CuredZombieVillager implements Trigger {
 
     @Expose
     @SerializedName("villager")

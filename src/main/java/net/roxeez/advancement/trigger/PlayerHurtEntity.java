@@ -6,7 +6,7 @@ import net.roxeez.advancement.data.DamageData;
 import net.roxeez.advancement.data.EntityData;
 import java.util.function.Consumer;
 
-public class PlayerHurtEntity implements TriggerData {
+public class PlayerHurtEntity implements Trigger {
 
     @Expose
     @SerializedName("damage")

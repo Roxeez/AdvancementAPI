@@ -21,7 +21,7 @@ public class ConsumeItemTest extends TriggerTest<ConsumeItem> {
     }
 
     @Override
-    protected Trigger<ConsumeItem> getTrigger() {
+    protected TriggerWrapper<ConsumeItem> getTrigger() {
         return TriggerType.CONSUME_ITEM;
     }
 

@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public abstract class TriggerTest<T extends TriggerData> extends DataTest<T> {
+public abstract class TriggerTest<T extends Trigger> extends DataTest<T> {
 
-    protected abstract Trigger<T> getTrigger();
+    protected abstract TriggerWrapper<T> getTrigger();
 
     @Test
     @DisplayName("Check if trigger data match")

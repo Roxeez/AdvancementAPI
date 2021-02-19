@@ -6,7 +6,7 @@ import net.roxeez.advancement.data.ItemData;
 import net.roxeez.advancement.data.Range;
 import java.util.function.Consumer;
 
-public class ItemDurabilityChanged implements TriggerData {
+public class ItemDurabilityChanged implements Trigger {
 
     @Expose
     @SerializedName("delta")

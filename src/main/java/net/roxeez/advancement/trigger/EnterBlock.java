@@ -8,7 +8,7 @@ import org.bukkit.Material;
 /**
  * Data used by {@link TriggerType#ENTER_BLOCK}
  */
-public class EnterBlock implements TriggerData {
+public class EnterBlock implements Trigger {
 
     @Expose
     @SerializedName("block")

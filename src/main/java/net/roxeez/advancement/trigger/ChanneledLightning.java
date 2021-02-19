@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 /**
  * Data used by {@link TriggerType#CHANNELED_LIGHTNING}
  */
-public class ChanneledLightning implements TriggerData {
+public class ChanneledLightning implements Trigger {
 
     @Expose
     @SerializedName("victims")

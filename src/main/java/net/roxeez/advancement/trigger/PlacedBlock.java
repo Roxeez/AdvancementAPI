@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 /**
  * Data used by {@link TriggerType#PLACED_BLOCK}
  */
-public class PlacedBlock implements TriggerData {
+public class PlacedBlock implements Trigger {
 
     @Expose
     @SerializedName("block")

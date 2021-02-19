@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.bukkit.NamespacedKey;
 
-public class PlayerGeneratesContainerLoot implements TriggerData {
+public class PlayerGeneratesContainerLoot implements Trigger {
 
     @Expose
     @SerializedName("loot_table")

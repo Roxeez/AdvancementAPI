@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 public class BeeNestDestroyedTest extends TriggerTest<BeeNestDestroyed> {
 
     @Override
-    protected Trigger<BeeNestDestroyed> getTrigger() {
+    protected TriggerWrapper<BeeNestDestroyed> getTrigger() {
         return TriggerType.BEE_NEST_DESTROYED;
     }
 

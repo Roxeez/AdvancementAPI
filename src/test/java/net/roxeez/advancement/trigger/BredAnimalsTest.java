@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 public class BredAnimalsTest extends TriggerTest<BredAnimals> {
 
     @Override
-    protected Trigger<BredAnimals> getTrigger() {
+    protected TriggerWrapper<BredAnimals> getTrigger() {
         return TriggerType.BRED_ANIMALS;
     }
 

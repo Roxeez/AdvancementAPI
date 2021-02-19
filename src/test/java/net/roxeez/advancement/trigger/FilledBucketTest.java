@@ -19,7 +19,7 @@ public class FilledBucketTest extends TriggerTest<FilledBucket> {
     }
 
     @Override
-    protected Trigger<FilledBucket> getTrigger() {
+    protected TriggerWrapper<FilledBucket> getTrigger() {
         return TriggerType.FILLED_BUCKET;
     }
 

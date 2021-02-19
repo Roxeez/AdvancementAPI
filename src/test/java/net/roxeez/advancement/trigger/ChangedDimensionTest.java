@@ -7,7 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 public class ChangedDimensionTest extends TriggerTest<ChangedDimension> {
 
     @Override
-    protected Trigger<ChangedDimension> getTrigger() {
+    protected TriggerWrapper<ChangedDimension> getTrigger() {
         return TriggerType.CHANGED_DIMENSION;
     }
 
