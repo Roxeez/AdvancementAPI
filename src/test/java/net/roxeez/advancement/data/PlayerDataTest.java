@@ -1,6 +1,7 @@
 package net.roxeez.advancement.data;
 
 import org.bukkit.GameMode;
+import org.bukkit.NamespacedKey;
 
 public class PlayerDataTest extends DataTest<PlayerData> {
 
@@ -9,13 +10,21 @@ public class PlayerDataTest extends DataTest<PlayerData> {
         PlayerData object = new PlayerData();
         object.setGameMode(GameMode.ADVENTURE);
         object.setLevel(10);
-        object.setRecipe("test", true);
+        object.setRecipe(NamespacedKey.minecraft("stone"), true);
         return object;
     }
 
     @Override
     protected String getJson() {
-        return "{\"gamemode\":\"adventure\",\"level\":{\"min\":10},\"recipes\":{\"\\\"test\\\"\":true}}";
+        return "{\n" +
+                "  \"gamemode\": \"adventure\",\n" +
+                "  \"level\": {\n" +
+                "    \"min\": 10\n" +
+                "  },\n" +
+                "  \"recipes\": {\n" +
+                "    \"minecraft:stone\": true\n" +
+                "  }\n" +
+                "}";
     }
 
 }

@@ -3,6 +3,7 @@ package net.roxeez.advancement.data;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.bukkit.GameMode;
+import org.bukkit.NamespacedKey;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ public class PlayerData {
 
     @Expose
     @SerializedName("recipes")
-    private Map<String, Boolean> recipes;
+    private Map<NamespacedKey, Boolean> recipes;
 
     public void setGameMode(GameMode gameMode) {
         this.gameMode = gameMode;
@@ -33,7 +34,7 @@ public class PlayerData {
         this.level = new Range<>(minimum, maximum);
     }
 
-    public void setRecipe(String id, boolean known) {
+    public void setRecipe(NamespacedKey id, boolean known) {
         if (this.recipes == null) {
             this.recipes = new HashMap<>();
         }

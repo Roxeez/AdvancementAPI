@@ -2,6 +2,7 @@ package net.roxeez.advancement.serialization;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
@@ -17,7 +18,10 @@ public class MapAdapter implements JsonSerializer<Map<?, ?>> {
         JsonObject object = new JsonObject();
 
         for (Map.Entry<?, ?> child : src.entrySet()) {
-            object.add(context.serialize(child.getKey()).toString(), context.serialize(child.getValue()));
+            JsonElement key = context.serialize(child.getKey());
+            JsonElement value = context.serialize(child.getValue());
+
+            object.add(key.getAsString(), value);
         }
 
         return object;

@@ -19,6 +19,7 @@ import java.util.Map;
 public class ObjectSerializer {
 
     private static final Gson GSON = new GsonBuilder()
+            .setPrettyPrinting()
             .excludeFieldsWithoutExposeAnnotation()
             .registerTypeHierarchyAdapter(Material.class, new MaterialAdapter())
             .registerTypeHierarchyAdapter(EntityType.class, new EntityTypeAdapter())

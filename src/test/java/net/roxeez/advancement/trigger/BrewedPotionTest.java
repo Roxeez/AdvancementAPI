@@ -15,14 +15,14 @@ public class BrewedPotionTest extends TriggerTest<BrewedPotion> {
     protected BrewedPotion getObject() {
         BrewedPotion object = new BrewedPotion();
 
-        object.setPotion(PotionType.LUCK);
+        object.setPotion(PotionType.SWIFTNESS_II);
 
         return object;
     }
 
     @Override
     protected String getJson() {
-        return "{\"potion\":\"minecraft:luck\"}";
+        return "{\"potion\":\"minecraft:strong_swiftness\"}";
     }
 
 }

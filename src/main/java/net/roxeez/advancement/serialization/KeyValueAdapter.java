@@ -12,7 +12,7 @@ public class KeyValueAdapter implements JsonSerializer<KeyValue<?, ?>> {
     @Override
     public JsonElement serialize(KeyValue<?, ?> src, Type typeOfSrc, JsonSerializationContext context) {
         JsonObject object = new JsonObject();
-        object.add(context.serialize(src.getKey()).toString(), context.serialize(src.getValue()));
+        object.add(context.serialize(src.getKey()).getAsString(), context.serialize(src.getValue()));
         return object;
     }
 

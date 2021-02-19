@@ -15,15 +15,15 @@ public class ChangedDimensionTest extends TriggerTest<ChangedDimension> {
     protected ChangedDimension getObject() {
         ChangedDimension object = new ChangedDimension();
 
-        object.setOrigin(DimensionType.OVERWORLD);
-        object.setDestination(DimensionType.THE_NETHER);
+        object.setFrom(DimensionType.THE_END);
+        object.setTo(DimensionType.OVERWORLD);
 
         return object;
     }
 
     @Override
     protected String getJson() {
-        return "{\"from\":\"overworld\",\"to\":\"the_nether\"}";
+        return "{\"from\":\"minecraft:the_end\",\"to\":\"minecraft:overworld\"}";
     }
 
 }

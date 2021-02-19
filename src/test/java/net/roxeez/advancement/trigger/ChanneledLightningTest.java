@@ -15,16 +15,14 @@ public class ChanneledLightningTest extends TriggerTest<ChanneledLightning> {
     protected ChanneledLightning getObject() {
         ChanneledLightning object = new ChanneledLightning();
 
-        object.addVictim(EntityType.BAT);
-        object.addVictim(EntityType.CHICKEN);
-        object.addVictim(EntityType.BEE);
+        object.addVictim(EntityType.SKELETON_HORSE);
 
         return object;
     }
 
     @Override
     protected String getJson() {
-        return "{\"victims\":[{\"type\":\"minecraft:bat\"},{\"type\":\"minecraft:chicken\"},{\"type\":\"minecraft:bee\"}]}";
+        return "{\"victims\":[{\"type\":\"minecraft:skeleton_horse\"}]}";
     }
 
 }

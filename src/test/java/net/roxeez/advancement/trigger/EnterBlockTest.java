@@ -16,7 +16,7 @@ public class EnterBlockTest extends TriggerTest<EnterBlock> {
 
     @Override
     protected String getJson() {
-        return "{\"block\":\"minecraft:rose_bush\",\"state\":{\"\\\"half\\\"\":\"lower\"}}";
+        return "{\"block\":\"minecraft:rose_bush\",\"state\":{\"half\":\"lower\"}}";
     }
 
     @Override

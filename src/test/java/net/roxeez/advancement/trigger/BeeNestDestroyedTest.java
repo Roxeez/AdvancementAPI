@@ -15,8 +15,8 @@ public class BeeNestDestroyedTest extends TriggerTest<BeeNestDestroyed> {
     protected BeeNestDestroyed getObject() {
         BeeNestDestroyed object = new BeeNestDestroyed();
 
-        object.setBlock(Material.BEE_NEST);
-        object.withItem(Material.IRON_AXE);
+        object.setBlock(Material.BEEHIVE);
+        object.withItem(Material.WOODEN_AXE);
         object.withBeeCount(3);
 
         return object;
@@ -24,7 +24,7 @@ public class BeeNestDestroyedTest extends TriggerTest<BeeNestDestroyed> {
 
     @Override
     protected String getJson() {
-        return "{\"block\":\"minecraft:bee_nest\",\"item\":{\"item\":\"minecraft:iron_axe\"},\"numBeesInside\":3}";
+        return "{\"block\":\"minecraft:beehive\",\"item\":{\"item\":\"minecraft:wooden_axe\"},\"numBeesInside\":3}";
     }
 
 }
