@@ -11,7 +11,7 @@ public class DimensionTypeAdapter implements JsonSerializer<DimensionType> {
 
     @Override
     public JsonElement serialize(DimensionType src, Type typeOfSrc, JsonSerializationContext context) {
-        return new JsonPrimitive(src.getName());
+        return context.serialize(src.getKey());
     }
 
 }

@@ -11,7 +11,7 @@ public class EntityTypeAdapter implements JsonSerializer<EntityType> {
 
     @Override
     public JsonElement serialize(EntityType src, Type typeOfSrc, JsonSerializationContext context) {
-        return new JsonPrimitive(src.getKey().toString());
+        return context.serialize(src.getKey());
     }
 
 }

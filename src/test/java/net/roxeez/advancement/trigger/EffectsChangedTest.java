@@ -20,7 +20,7 @@ public class EffectsChangedTest extends TriggerTest<EffectsChanged> {
 
     @Override
     protected String getJson() {
-        return "{\"effects\":{\"\\\"minecraft:absorption\\\"\":{\"amplifier\":{\"min\":1},\"duration\":{\"min\":1}}}}";
+        return "{\"effects\":{\"minecraft:absorption\":{\"amplifier\":{\"min\":1},\"duration\":{\"min\":1}}}}";
     }
 
     @Override

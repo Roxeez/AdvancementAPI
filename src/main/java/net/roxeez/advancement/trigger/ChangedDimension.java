@@ -21,7 +21,7 @@ public class ChangedDimension implements Trigger {
      *
      * @param type Type of dimension
      */
-    public void setOrigin(@NotNull DimensionType type) {
+    public void setFrom(@NotNull DimensionType type) {
         Preconditions.checkNotNull(type);
         this.from = type;
     }
@@ -31,7 +31,7 @@ public class ChangedDimension implements Trigger {
      *
      * @param type Type of dimension
      */
-    public void setDestination(DimensionType type) {
+    public void setTo(DimensionType type) {
         Preconditions.checkNotNull(type);
         this.to = type;
     }

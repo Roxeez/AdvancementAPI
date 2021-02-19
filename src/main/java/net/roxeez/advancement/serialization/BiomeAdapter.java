@@ -11,7 +11,7 @@ public class BiomeAdapter implements JsonSerializer<Biome> {
 
     @Override
     public JsonElement serialize(Biome src, Type typeOfSrc, JsonSerializationContext context) {
-        return new JsonPrimitive(src.getKey().toString());
+        return context.serialize(src.getKey());
     }
 
 }

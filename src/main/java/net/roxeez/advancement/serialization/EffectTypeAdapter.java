@@ -11,7 +11,7 @@ public class EffectTypeAdapter implements JsonSerializer<EffectType> {
 
     @Override
     public JsonElement serialize(EffectType src, Type typeOfSrc, JsonSerializationContext context) {
-        return new JsonPrimitive(src.getKey().toString());
+        return context.serialize(src.getKey());
     }
 
 }

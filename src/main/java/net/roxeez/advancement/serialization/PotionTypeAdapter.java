@@ -11,7 +11,7 @@ public class PotionTypeAdapter implements JsonSerializer<PotionType> {
 
     @Override
     public JsonElement serialize(PotionType src, Type typeOfSrc, JsonSerializationContext context) {
-        return new JsonPrimitive(src.getKey().toString());
+        return context.serialize(src.getKey());
     }
 
 }

@@ -2,9 +2,11 @@ package net.roxeez.advancement.trigger;
 
 import net.roxeez.advancement.Criteria;
 import net.roxeez.advancement.data.DataTest;
+import org.json.JSONException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.skyscreamer.jsonassert.JSONAssert;
 
 public abstract class TriggerTest<T extends Trigger> extends DataTest<T> {
 
@@ -18,9 +20,10 @@ public abstract class TriggerTest<T extends Trigger> extends DataTest<T> {
 
     @Test
     @DisplayName("Check if criteria is correctly serialized")
-    public void criteria() {
-        String serialized = serializer.serialize(new Criteria("test", getTrigger(), getObject()));
-        Assertions.assertEquals("{\"trigger\":\"" + getTrigger().getKey().toString() + "\",\"conditions\":" + getJson() + "}", serialized);
+    public void criteria() throws JSONException {
+        String serialized = serializer.serialize(new Criteria("example", getTrigger(), getObject()));
+        System.out.println(serialized);
+        JSONAssert.assertEquals("{\"trigger\":\"" + getTrigger().getKey().toString() + "\",\"conditions\":" + getJson() + "}", serialized, true);
     }
 
 }

@@ -11,7 +11,7 @@ public class MaterialAdapter implements JsonSerializer<Material> {
 
     @Override
     public JsonElement serialize(Material src, Type typeOfSrc, JsonSerializationContext context) {
-        return new JsonPrimitive(src.getKey().toString());
+        return context.serialize(src.getKey());
     }
 
 }

@@ -14,7 +14,7 @@ public class DimensionTypeTest extends DataTest<DimensionType> {
 
     @Override
     protected String getJson() {
-        return "\"overworld\"";
+        return "\"minecraft:overworld\"";
     }
 
     @Test
