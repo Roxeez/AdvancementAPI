@@ -4,7 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import org.bukkit.Material;
 
-// TODO : Add enchantments, stored_enchantments, nbt, tag
+// TODO : Add enchantments, stored_enchantments, tag
 public class ItemData {
 
     @Expose
@@ -22,6 +22,10 @@ public class ItemData {
     @Expose
     @SerializedName("potion")
     private PotionType potion;
+    
+    @Expose
+    @SerializedName("nbt")
+    private String nbt;
 
     public void setType(Material material) {
         this.item = material;
@@ -46,5 +50,9 @@ public class ItemData {
     public void setPotion(PotionType potion) {
         this.potion = potion;
     }
-
+    
+    public void setNbt(String nbt) {
+        this.nbt = nbt;
+    }
+    
 }

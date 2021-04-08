@@ -18,7 +18,29 @@ public class Icon {
     @Expose
     @SerializedName("item")
     private NamespacedKey item;
-
+    
+    /**
+     * NBT values of displayed item in this icon
+     */
+    @Expose
+    @SerializedName("nbt")
+    private String nbt;
+    
+    public Icon() {
+    }
+    
+    public Icon(@NotNull NamespacedKey item, String nbt) {
+        Preconditions.checkNotNull(item);
+        this.item = item;
+        this.nbt = nbt;
+    }
+    
+    public Icon(@NotNull Material material, String nbt) {
+        Preconditions.checkNotNull(material);
+        this.item = material.getKey();
+        this.nbt = nbt;
+    }
+    
     /**
      * Set item shown in this icon
      *
@@ -28,5 +50,14 @@ public class Icon {
         Preconditions.checkNotNull(material);
         this.item = material.getKey();
     }
-
+    
+    /**
+     * Set the NBT values of the icon
+     * 
+     * @param nbt NBT values of the displayed icon
+     */
+    public void setNbt(String nbt) {
+        this.nbt = nbt;
+    }
+    
 }

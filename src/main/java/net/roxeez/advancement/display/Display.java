@@ -114,17 +114,22 @@ public class Display {
     }
 
     /**
-     * Shortcut to only set and item as icon
+     * Shortcut to only set an item as icon
      *
      * @param material Item of advancement icon
      */
     public void setIcon(@NotNull Material material) {
-        Preconditions.checkNotNull(material);
-
-        Icon icon = new Icon();
-        icon.setItem(material);
-
-        this.icon = icon;
+        this.icon = new Icon(material, null);
+    }
+    
+    /**
+     * Shortcut to only set an item with NBT values as icon
+     *
+     * @param material Item of advancement icon
+     * @param nbt NBT values of the advancement icon
+     */
+    public void setIcon(@NotNull Material material, String nbt) {
+        this.icon = new Icon(material, nbt);
     }
 
     /**
