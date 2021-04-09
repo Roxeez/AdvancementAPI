@@ -8,7 +8,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -18,7 +18,7 @@ public class AdvancementManager {
 
     private final Plugin plugin;
     private final ObjectSerializer serializer  = new ObjectSerializer();
-    private final Map<NamespacedKey, Advancement> advancements = new HashMap<>();
+    private final Map<NamespacedKey, Advancement> advancements = new LinkedHashMap<>();
 
     /**
      * Create a new AdvancementManager instance for this plugin
