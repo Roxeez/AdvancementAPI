@@ -159,7 +159,7 @@ public class Display {
      *
      * @param toast True if displayed false if not
      */
-    public void toast(boolean toast) {
+    public void setToast(boolean toast) {
         this.toast = toast;
     }
 
@@ -168,7 +168,7 @@ public class Display {
      *
      * @param announce True if yes false if not
      */
-    public void announce(boolean announce) {
+    public void setAnnounce(boolean announce) {
         this.announce = announce;
     }
 
@@ -177,7 +177,7 @@ public class Display {
      *
      * @param hidden True if hidden false if visible
      */
-    public void hidden(boolean hidden) {
+    public void setHidden(boolean hidden) {
         this.hidden = hidden;
     }
 
