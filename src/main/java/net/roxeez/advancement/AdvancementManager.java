@@ -8,6 +8,7 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -17,7 +18,7 @@ import java.util.Map;
 public class AdvancementManager {
 
     private final Plugin plugin;
-    private final ObjectSerializer serializer  = new ObjectSerializer();
+    private final ObjectSerializer serializer = new ObjectSerializer();
     private final Map<NamespacedKey, Advancement> advancements = new LinkedHashMap<>();
 
     /**
@@ -44,7 +45,6 @@ public class AdvancementManager {
      * Get a registered advancement of this plugin by id
      *
      * @param id Id of this advancement
-     *
      * @return Advancement with this id or null if none
      */
     @Nullable
@@ -63,10 +63,10 @@ public class AdvancementManager {
         Advancement advancement = creator.create(new Context(plugin, advancements));
         this.advancements.put(advancement.getKey(), advancement);
     }
-    
+
     /**
      * Registers an Advancement
-     * 
+     *
      * @param advancement The Advancement to register
      */
     public void register(@NotNull Advancement advancement) {
@@ -76,24 +76,27 @@ public class AdvancementManager {
 
     /**
      * Create all registered advancements
+     *
+     * @param clean If previously generated advancements should be removed.
      */
-    public void createAll()
-    {
-        plugin.getLogger().info("[AdvancementAPI] Cleaning previously generated advancements");
-        for(Advancement advancement : this.advancements.values())
-        {
-            if (Bukkit.getAdvancement(advancement.getKey()) != null)
-            {
-                Bukkit.getUnsafe().removeAdvancement(advancement.getKey());
+    @SuppressWarnings("deprecation")
+    public void createAll(boolean clean) {
+        if (clean) {
+            plugin.getLogger().info("[AdvancementAPI] Cleaning previously generated advancements");
+            for (Advancement advancement : this.advancements.values()) {
+                if (Bukkit.getAdvancement(advancement.getKey()) != null) {
+                    Bukkit.getUnsafe().removeAdvancement(advancement.getKey());
+                }
             }
+
+            Bukkit.reloadData();
         }
 
-        Bukkit.reloadData();
-
         plugin.getLogger().info("[AdvancementAPI] Generating advancements");
-        for(Advancement advancement : this.advancements.values())
-        {
-            Bukkit.getUnsafe().loadAdvancement(advancement.getKey(), serializer.serialize(advancement));
+        for (Advancement advancement : this.advancements.values()) {
+            if (Bukkit.getAdvancement(advancement.getKey()) == null) {
+                Bukkit.getUnsafe().loadAdvancement(advancement.getKey(), serializer.serialize(advancement));
+            }
         }
 
         Bukkit.reloadData();
