@@ -100,6 +100,16 @@ public class Display {
     }
 
     /**
+     * Set the icon of this advancement
+     * 
+     * @param icon The icon of this advancement
+     */
+    public void setIcon(@NotNull Icon icon) {
+        Preconditions.checkNotNull(icon);
+        this.icon = icon;
+    }
+
+    /**
      * Set icon of this advancement
      * This method will set icon and then call provided consumer on it
      *
