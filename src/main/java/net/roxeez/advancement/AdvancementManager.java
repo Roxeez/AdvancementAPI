@@ -63,6 +63,16 @@ public class AdvancementManager {
         Advancement advancement = creator.create(new Context(plugin, advancements));
         this.advancements.put(advancement.getKey(), advancement);
     }
+    
+    /**
+     * Registers an Advancement
+     * 
+     * @param advancement The Advancement to register
+     */
+    public void register(@NotNull Advancement advancement) {
+        Preconditions.checkNotNull(advancement);
+        advancements.put(advancement.getKey(), advancement);
+    }
 
     /**
      * Create all registered advancements
