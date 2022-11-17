@@ -4,7 +4,7 @@ package net.roxeez.advancement.display;
  * Represent all possible advancement frame
  */
 public enum FrameType {
-    CHALLENGER("challenger"),
+    CHALLENGE("challenge"),
     TASK("task"),
     GOAL("goal");
 
