@@ -2,6 +2,7 @@ package net.roxeez.advancement;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
+import net.roxeez.advancement.event.AdvancementsCreateEvent;
 import net.roxeez.advancement.serialization.ObjectSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
@@ -100,6 +101,7 @@ public class AdvancementManager {
         }
 
         Bukkit.reloadData();
+        Bukkit.getServer().getPluginManager().callEvent(new AdvancementsCreateEvent());
     }
 
 }
